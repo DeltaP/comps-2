@@ -1,12 +1,22 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbold}
+\usepackage{sectsty}
+\sectionfont{\large}
+
+\newcommand{\newln}{\\&{}}
+\newcommand{\parenthnewln}{\right.\\&\left.\quad\quad{}}
 
 \begin{document}
-\title{Applying Spin and Angular Resolved Photoemission Spectroscopy to the study of Spin Orbit Coupling in Materials
-\\ \Large{\emph{Comps II Proposal}}}
+\title{Applying Spin and Angular Resolved Photoemission Spectroscopy to the study of Spin Orbit Coupling in Materials}
 \author{Gregory Petropoulos}
 \date{September 12, 2012}
 \maketitle
+\abstract{
+In this review I discuss the experimental set up of spin resolved ARPES and \lowercase{spin orbit coupling in materials}.
+}
 
 \section{Introduction}
 Angular resolved photoemission spectroscopy (ARPES) is an experimental method that allows physicists to directly probe the surface band structure of materials.
@@ -16,19 +26,86 @@ More recent developments in the field of ARPES have allowed researchers to measu
 Spin measurements can be difficult experimentally and spin resolved ARPES is complementary to other techniques and is especially useful in studying itinerant magnetic systems \cite{Osterwalder}.
 Understanding spin dynamics in condensed matter systems is especially important for the physics and application of devices that exploit electric spin, called spintronics \cite{wolf}.
 
-Spin resolved ARPES is currently being used to measure various strong spin-orbit materials by mapping their ground state spin-orbit texture.  Spin-orbit coupling is the interaction of a particle's spin with its momentum; this coupling in an asymmetrical confining potential can lead to an asymmetry in the spin polarization of the material.  The Rashba effect causes spin asymmetry to arise in a material due to differences in the structure between the bulk and surface of a material \cite{Dil}.  In both types of materials, the spin of photoemitted electrons contains information about the spin asymmetry in the sample.  The asymmetry of the photoemitted electrons is then measured using Mott scattering, which separates spin states by scattering the photoemitted electron beam off the Coulomb field of heavy atoms.
+Spin resolved ARPES is currently being used to measure various strong spin-orbit materials by mapping their ground state spin-orbit texture.
+Spin-orbit coupling is the interaction of a particle's spin with its momentum; this coupling in an asymmetrical confining potential can lead to an asymmetry in the spin polarization of the material.
+The Rashba effect causes spin asymmetry to arise in a material due to differences in the structure between the bulk and surface of a material \cite{Dil}.
+In both types of materials, the spin of photoemitted electrons contains information about the spin asymmetry in the sample.
 
-I propose an article describing the physics of spin resolved ARPES and its application to studying Spin Orbit Coupling in Materials.  My review will discuss the experimental set up of spin resolved ARPES and \lowercase{spin orbit coupling in materials}.  My area of research is theoretical particle physics, specifically using lattice gauge theory to study beyond standard model physics.
+\section{Spin Orbit Couplings}
+Spin orbit coupling occurs when an electron's spin interacts with its momentum.
+This effect happens in atomic systems and is responsible for the fine structure in atomic spectra.
+While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}.
+The Dirac equation,
+\begin{align}\begin{split}
+  & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)
+\end{split}\end{align}
+where $\boldsymbol\sigma$ are the Pauli matrices, $\mathbb{1}$ is the two-by-two identity matrix, and $\psi$ is a four-component Dirac spinor.
+For $\frac{v}{c}\lesssim 0.1$ an expansion in $(\frac{v}{c})^2$ is appropriate and  to first order gives
+\begin{align}\begin{split}
+  & \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n
+\end{split}\end{align}
+where $\psi_n$ has been normalized to preserve unitarity in the expansion and $E=\frac{1}{e}\nabla V$.
+This expansion produces several well known terms from non relativistic quantum mechanics.
+The third term is the Zeeman term, the fourth term is the spin orbit coupling, the fifth is the Darwin term, the last three terms are higher order corrections.
+The spin orbit term can be recast in a more familiar from since $E=\frac{e\hat{r}}{r^2}$ is the coulomb field from the nucleus.
+\begin{align}
+  -\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}=-\frac{e^2\hbar\boldsymbol{\sigma\cdot p \times r}}{4m_0^2c^2r^3}\newline=\frac{\boldsymbol{\hat{S}\cdot \hat{L}}}{2m_0^2c^2r^3}
+\end{align}
+Here $\hat{S}, \hat{L}$ are the spin operator and angular momentum operator respectively and the Thomas factor of $\frac{1}{2}$ appears naturally.
+
+The above derivation shows that spin orbit coupling is a relativistic effect.
+Therefore it is not surprising that there should be a similar effect in materials.
+In materials the periodic arrangement of the nuclei give rise to an electronic band structure.
+
+\section{Rashba}
+...
+\section{Angular Resolved Photoemission Spectroscopy}
+The photoelectric effect, by which light incident on a metal freed electrons from the material, was first discovered by Hertz in 1887.
+Physicist of the day did not understand the photoelectric effect until Albert Einstien published his 1905 paper, for which he later won the Nobel Prize.
+Einstein realized that the incident light came in quantum packets called photons.
+These photons could be absorbed by an electron in the material.
+If the electron has enough energy after absorbing a photon it can overcome the potential barrier keeping electrons in the material.
+This process is summarized by
+\begin{align}
+  E_{\text{kin}}=h\nu-\phi
+\end{align}
+Where $E_{\text{kin}}$ is the maximum kinetic energy of the escaping electron, $\nu$ is the photon frequency, and $\phi$ is the work function of the material.
+Work functions of typical metals are approximately 4-5 eV.
+
+The photoemitted electrons escape from the material's surface in all directions.
+By measuring the energy, $E_{\text{kin}}$, of photoelectrons coming off a surface at a given angle the electrons' momentum \emph{p} can be completely determined.
+The magnitude of the photoelectrons' momentum is given by $|\boldsymbol{p}|=\sqrt{2mE_{\text{kin}}}$ and the parallel and perpendicular components can be obtained from the polar and azimuthal emission angle.
+With the photon energies used in ARPES experiments the photon momentum can be neglected.
+Therefore in the noninteracting electron picture and using conservation of energy and momentum the kinetic energy and momentum of the photoelectron can be related to the binding energy $E_b$ and the crystal momentum $\hbar\boldsymbol{k}$ in the solid\cite{Damascelli}:
+\begin{align}
+  E_{\text{kin}}=h\nu-\phi-|E_B|
+\end{align}
+\begin{align}
+  \boldsymbol{p_{\parallel}}=\hbar\boldsymbol{k_{\parallel}}=\sqrt{2mE_{\text{kin}}}\sin\theta
+\end{align}
+$\theta$ is the angle coming off the surface normal.
+The perpendicular component of the wave vector $\boldsymbol{k_{\perp}}$ is not conserved across the sample surface because translational symmetry across the surface in the normal direction is broken.  
+This means that determination of the full crystal wave vector \emph{k} can not be determined from ARPES alone.
+In low dimensional systems $\boldsymbol{k_{\perp}}$ becomes less relevant; in the case of 2D films the electronic dispersion is almost completely characterized by $\boldsymbol{k_{\parallel}}$.
 
 
-\section{Spin Orbit Couplings in Materials}
-The electronic spin degrees of freedom were first discovered in the Stern Ger... experiment.
-In this experiment (explain experment and results from Shankar)
-\subsection{Rashba}
-\section{Angular resolved photoemission spectroscopy}
-\subsection{Looking for Spin Effects}
-\subsection{Experimental Setups}
-\section{Applications to Spintronics}
+ARPES instruments 
+
+
+\section{Looking for Spin Effects}
+To measure the spin effects 
+\section{COPHEE or ESPRESSO?}
+Two SARPES setups that exist at synchrotron beamlines as of the writing of this article are COPHEE (COmplete PHotoEmission Experiment) in the Swiss Light Source and ESPRESSO (Efficient SPin REsolved SpectroScopy Observation) located in Hiroshima Synchrotron Radiation Center.
+
+COPHEE 
+
+ESPRESSO
+\section{Experimental Results for Bi(111)}
+Bi is the heaviest nonradioactive element.
+Because it has such a large Z value it was expected to have strong spin orbit coupling as well as strong spin-split surface states resulting from the Rashba effect.
+
+
+\section{Outlook and Applications to Spintronics}
 One of the most exciting applications of studying the surface spin properties of materials is the application of these materials for spintronics.
 Spintronics are electronic devices that use the
 
