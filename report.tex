@@ -3,11 +3,14 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{gensymb}
 \usepackage{bbold}
 \usepackage{sectsty}
 \sectionfont{\large}
 \usepackage{setspace}
 \doublespacing
+\usepackage[sorting=none]{biblatex}
+\bibliography{mybib}
 
 \newcommand{\newln}{\\&{}}
 \newcommand{\parenthnewln}{\right.\\&\left.\quad\quad{}}
@@ -38,7 +41,7 @@ In both types of materials, the spin of photoemitted electrons contains informat
 \section{Spin Orbit Couplings}
 Spin orbit coupling occurs when an electron's spin interacts with its momentum.
 This effect happens in atomic systems and is responsible for the fine structure in atomic spectra.
-While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}, shown in equation \ref{eq:Dirac}.
+While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}, shown in Eq. (\ref{eq:Dirac}).
 \begin{align}\begin{split}
   \label{eq:Dirac}
   & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)
@@ -50,7 +53,7 @@ For non-relativistic electrons, $\frac{v}{c}\lesssim 0.1$, an expansion in $(\fr
   & \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n
 \end{split}\end{align}
 where $\psi_n$ has been normalized to preserve unitarity in the expansion and $E=\frac{1}{e}\nabla V$.
-The expansion in equation \ref{eq:expansion} contains several well known terms from non relativistic quantum mechanics.
+The expansion in Eq. (\ref{eq:expansion}) contains several well known terms from non-relativistic quantum mechanics.
 The third term is the Zeeman term, the fourth term is the spin orbit coupling, and the fifth is the Darwin term.
 The last three terms are higher order corrections.
 The spin orbit term can be rewritten in a more familiar way since $E=\frac{e\hat{r}}{r^2}$ is the electric field sourced by the nucleus.
@@ -75,8 +78,8 @@ The photoelectric effect, by which light incident on a metal freed electrons fro
 Physicist of the day did not understand the photoelectric effect until Albert Einstien published his 1905 paper, for which he later won the Nobel Prize.
 Einstein realized that the incident light came in quantum packets called photons.
 These photons could be absorbed by an electron in the material, a process that transfers the photon energy and momentum to the electron.
-If the electron has enough energy after absorbing a photon it can overcome the potential barrier keeping electrons in the material.
-This process is summarized in equation \ref{eq:photoelectric}.
+If the electron has enough energy after absorbing a photon, it can overcome the potential barrier keeping electrons in the material.
+This process is summarized in Eq. (\ref{eq:photoelectric}).
 \begin{align}
   \label{eq:photoelectric}
   E_{\text{kin}}=h\nu-\phi
@@ -92,7 +95,7 @@ The magnitude of the photoelectron momentum is given by $|\boldsymbol{p}|=\sqrt{
 With the photon energies used in ARPES experiments the photon momentum can be neglected.
 Therefore in the noninteracting electron picture with conservation of energy and momentum the kinetic energy and momentum of the photoelectron can be related to the binding energy $E_b$ and the crystal momentum $\hbar\boldsymbol{k}$ in the solid\cite{Damascelli}:
 \begin{align}
-  E_{\text{kin}}=h\nu-\phi-|E_B|
+  E_{\text{kin}}=h\nu-\phi-|E_b|
 \end{align}
 \begin{align}
   \boldsymbol{p_{\parallel}}=\hbar\boldsymbol{k_{\parallel}}=\sqrt{2mE_{\text{kin}}}\sin\theta
@@ -102,8 +105,14 @@ The perpendicular component of the wave vector $\boldsymbol{k_{\perp}}$ is not c
 As a result, the determination of the full crystal wave vector \emph{k} can not be determined from ARPES alone.
 In low dimensional systems $\boldsymbol{k_{\perp}}$ becomes less relevant; in the case of 2D films the electronic dispersion is almost completely characterized by $\boldsymbol{k_{\parallel}}$.
 
-
-As mentioned above, ARPES experiments need a light source that is energetic enough to cause the sample to photoemit.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=2in]{fig/arpes.pdf}
+  \caption[should I put this here?]
+  {caption needed Taken from \cite{Damascelli}}
+  \label{fig:asymmetry}
+\end{figure}
+ARPES experiments need a light source that is energetic enough to cause the sample to photoemit.
 Three types of photon sources are typically used:  gas discharge lamps \cite{Damascelli}, synchrotron radiation \cite{Damascelli}, and more recently lasers \cite{Dessau}.
 For 
 
@@ -117,43 +126,92 @@ For
   {caption needed Taken from \cite{Okuda-Kimura}}
   \label{fig:asymmetry}
 \end{figure}
-As discussed in the above section, ARPES measures both the energy and momentum degrees of freedom but ignores the spin of the detected electrons.
+Traditional ARPES measures both the energy and momentum degrees of freedom but ignores the spin degree of freedom.
 SARPES measures all three quantum numbers simultaneously and allows for a much richer understanding of the band structure of materials.
 Accomplishing this is more technically challenging than it appears at first glance.
 A Stern-Gerlach experiment would be the most direct way to investigate spin polarization and can determine spin polarization with 100\% efficience.
 However, the Lorentz force makes it impossible to measure the spin of a charged object such as an electron.
-As a result physicists measure electron spin indirectly by spin-dependant scattering off of a material with well studied properties.
+As a result physicists measure electron spin indirectly by spin-dependant scattering off of a target.
 As one can guess, this is a very inefficient process.
 Figure \ref{fig:asymmetry} (a) and (b) show how this process is realized.
+The spin dependant scattering is characterized by an asymmetry $A$ between two scattering channels A and B \cite{Okuda-Kimura}.
+\begin{align}
+  A=\frac{I_A-I_B}{I_A+I_B}
+\end{align}
+Because the Stern-Gerlach experiment is 100\% efficient, this asymmetry is the spin polarization.
+In the scattering used in experiments the efficiency is much smaller.
+Instead the polarization is written as an energy dependent function such that the polarization is given by $P=S(E)A$.
+The function $S(E)$ is called the Sherman function and it measures the efficiency of the target for a given electron energy.
+If the Sherman function is known and the asymmetry is measured then spin up and spin down intensities can be found
+\begin{align}
+  I_{\uparrow}=\frac{(1+P)I}{2}\quad I_{\downarrow}=\frac{(1-P)I}{2}\quad \text{with}\quad I=I_{\uparrow}+I_{\downarrow}\propto I_A+I_B
+\end{align}
+An overall figure of merit can be assigned to the measurement of spin polarization $\epsilon=\frac{I}{I_0}(S(E))^2$.
 
-sherman function
-probability
+The most common type of spin detector uses Mott scattering.
+Mott scattering takes advantage of spin orbit coupling between relativistic electrons being scattered with atomic nuclei.
+Electrons are typically accelerated to relativistic energies and strike a thin gold film.
+Gold is often chosen because it is easy to make, chemically inert, and has a relatively high Z.
+Two beams, A and B, are then measured coming off the gold target at equal angles\cite{Hoesch}.
+Mott detectors are easy to work with because their scattering properties are extremely stable.
+Additionally, calibration of Mott detectors can be achieved by measuring the Sherman function and comparing to theoretical calculations.
+One drawback of Mott scattering is that the two channels are measured using different detectors, leading to an unwanted asymmetry from instrumentation\cite{Okuda-Kimura}.
+In magnetic samples this can be accounted for by reversing the magnetic field on the sample.
+Typical figure of merit values for Mott scattering is $1\times10^{-4}$.
 
-The most common type of spin detector is the Mott detector.
-The Mott detector works by
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=2in]{fig/detectortypes.pdf}
+  \caption[should I put this here?]
+  {caption needed Taken from \cite{Okuda-Kimura}}
+  \label{fig:asymmetry}
+\end{figure}
 
-VLEED uses spin exhange interractions ...
-Was improved by \cite{Bertacco}
-improved sensitivity
-
+A newer method of measuring the spin polarization of electrons is very low energy electron diffraction (VLEED).
+VLEED spin detectors use a ferromagnetic target to preferentially reflect spins of a chosen polarization.
+This is accomplished because a magnetized ferromagnet has an asymmetry in the density of states with spin up and spin down.
+The probability of an electron of a given spin to be reflected or absorbed by the target is proportional to the density of unoccupied spin states in the material\cite{Okuda-Kimura}.
+This technique is much more efficient than Mott scattering, typical figure of merits are $1\times10^{-2}$.
+Furthermore, only one detector is required so detector asymmetry is not a problem in non magnetic samples.
+Unfortunately, preparing the target is difficult and the scattering properties of the target degrade with time.
+Great improvements were made by \cite{Bertacco} who showed a Fe(001)-p(1x1)-O target was both a better polarizer and was orders of magnitude more stable than Fe alone.
+Even with this improvement, VLEED instruments must still be calibrated against a Mott instrument and periodically checked to ensure stability.
+Nonetheless, the two order of magnitude gain of VLEED detectors over Mott detectors is significant and has lead to much better SARPES results.
 \section{COPHEE or ESPRESSO?}
-While the number of SARPES experiments is growing, I will focus on the design of two synchrotron beamlines:  COPHEE (COmplete PHotoEmission Experiment) in the Swiss Light Source and ESPRESSO (Efficient SPin REsolved SpectroScopy Observation) located in Hiroshima Synchrotron Radiation Center.
+While the number of SARPES experiments is growing, I will focus on the design of two of the more sophisticated instruments:  COPHEE (COmplete PHotoEmission Experiment) in the Swiss Light Source and ESPRESSO (Efficient SPin REsolved SpectroScopy Observation) located in Hiroshima Synchrotron Radiation Center.
+Both of these resources combine spin resolved and spin integrated measurements.
+This allows researchers to get a very detailed picture of the band structure with the spin integrated measurement before honing in on the spin texture.
 
-COPHEE 
+COPHEE, shown in figure \ref{fig:cophee}, is unique because it employs two orthogonally mounted Mott polarimeters\cite{Hoesch}.
+Both polarimeters are capable of measuring spin polarization in two directions.
+As a result of this geometry it is able to measure four spin projections simultaneously, allowing for a full three dimensional spin characterization of the sample's electron structure.
+The redundant spin projection serves as a useful cross check between the two analysers.
+COPHEE is is able to reach energy resolutions of 15meV and angular resolutions of $\pm1\degree$.
 
-ESPRESSO
+ESPRESSO, shown in figure \ref{fig:espresso}, abandons Mott polarimiters in favor of the more sensitive VLEED detector, as a result it has the highest resolution of any SARPES instrument to date \cite{Okuda}.
+The VLEED polarimiter is a Fe(001)-p(1x1)-O film target and is operated at 6eV.
+Electromagnetic coils are placed in both the x and z direction.
+This allows the detector to measure both in plane and out of plane spin polarization of the sample being studied.
+ESPRESSO is able to achieve energy resolutions of 7.5meV and angular resolutions of $\pm0.18\degree$.
+
 \section{Experimental Results for Bismuth Films}
 Bismuth (Bi) is the heaviest nonradioactive element.
-Because it has such a large Z value it was expected to have strong spin orbit coupling as well as strong spin-split surface states resulting from the Rashba effect.
+Because it has such a large Z value it was expected to have strong spin ortbit coupling as well as strong spin-split surface states resulting from the Rashba effect.
 
 The first SARPES study of Bi was conducted by Hirahara et al \cite{Hirahara}.
-They studied (sample info) using (mott info) with an energy resolution of (res info).
-These firsts results probed the surface states and found agreement with the predicted Rashba splitting.
-Later Kimura et al studied the bulk ...
+They studied 10 bilayer thick films of Bi(111) using an unpolarized Helium discharge lamp (21.2eV) and a Mott detector to measure the spin asymmetry.
+Their measurment had an energy resolution of 110meV and 1$\degree$ and probed surface states.
+This measurment revealed a spin structure is antisymmetric with respect to the $\bar{\Gamma}$ point as predicted by theory and the spin polarization could be as large as $\pm 0.5$.
+Later Kimura et al used SARPES to probe the bulk continuum states of Bi(111).
+Their findings are also consistent with \cite{Hirahara} and theoretical predictions of a strong Rashba splitting antisymmetric to the $\bar{\Gamma}$ point.
 
-Using a Xeon discharge lamp and a SARPES setup, a group in Tohoku observed an unexpected out-of-plane spin polarization\cite{Takayama}.
+Using a Xeon discharge lamp (8.437eV), a group in Tohoku was able to achieve a resolution of 40meV on 40 bilayer samples\cite{Takayama}.
+In addition to observing the same in plane Rashba splitting that previous groups reported, the Tohoku group observed an unexpected out-of-plane spin polarization as well as an asymmetry of the parallel component of polarization across the $\bar{\Gamma}$ point.
+Both of these features are not described by the Rashba effect and were unexpected.
+The authors offer the breaking of time reversal symmetry as a possible explanation for their observations.
+Such a breaking would have profound implications because such symmetry breaking is usually caused by magnetic order in the crystal which is not present in Bi.
 
-More recently the Hiroshima group studied Bi(111) using the ESPRESSO machine \cite{Miyahara}.
+More recently the Hiroshima group studied Bi(111) using the ESPRESSO machine and a He lamp source (21.22eV)\cite{Miyahara}.
 These measurements are the most accurate to date with resolutions of $\Delta E\sim20meV$ and $\Delta k\sim0.02\AA$.
 The Hiroshima group found the expected in-plane Rashba helical spin structure as well as the anomalous out-of-plane spin polarization.
 Unlike the Tohoku group, they were able to show a dependence of the out-of-plane spin polarization on the film quality.
@@ -161,16 +219,11 @@ Thus the Hiroshima group concluded the effect is a result three-fold crystal sym
 Their conclusions are supported by recent X-ray diffraction results that show Bi films can have two domain types in which the crystal axis is rotated 180 degrees to each other \cite{Shirasawa}.
 The Hiroshima group was able to observe that the in-plane Rashba spin polarisation was unaffected by domain type while the out-of-plane spin polarization was opposite in the two domains.
 
-
-
-
 \section{Outlook and Applications to Spintronics}
+Clearly recent improvements in SARPES have made it a powerful tool for studying spin-dependant phenomena in materials.
+
 One of the most exciting applications of studying the surface spin properties of materials is the application of these materials for spintronics.
-Spintronics are electronic devices that use the
+Spintronics are electronic devices that use spin dependant properites of materials to 
 
-
-
-\bibliographystyle{plain}
-\bibliography{mybib}
-
+\printbibliography
 \end{document}
