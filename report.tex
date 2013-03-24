@@ -2,6 +2,7 @@
 \usepackage[margin=1.25in]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{graphicx}
 \usepackage{bbold}
 \usepackage{sectsty}
 \sectionfont{\large}
@@ -14,11 +15,10 @@
 \begin{document}
 \title{Applying Spin and Angular Resolved Photoemission Spectroscopy to the study of the Rashba effect in Bismuth Films}
 \author{Gregory Petropoulos}
-\date{September 12, 2012}
 \maketitle
 \abstract{
-In this review discuss spin orbit coupling and how the Rashba effect can lead to spin-split bands in spin orbit coupled materials.
-I then reach the focus of this paper which is the experimental setup of spin and angular resolved photoemission spectroscopy.
+This review opens with a discussion of spin orbit coupling and how the Rashba effect can lead to spin-split bands in spin orbit coupled materials.
+The focus of this paper is the experimental setup of spin and angular resolved photoemission spectroscopy.
 I end with discussion of recent results for Bismuth films and an outlook for the future.
 }
 
@@ -38,49 +38,59 @@ In both types of materials, the spin of photoemitted electrons contains informat
 \section{Spin Orbit Couplings}
 Spin orbit coupling occurs when an electron's spin interacts with its momentum.
 This effect happens in atomic systems and is responsible for the fine structure in atomic spectra.
-While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}.
-The Dirac equation,
+While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}, shown in equation \ref{eq:Dirac}.
 \begin{align}\begin{split}
+  \label{eq:Dirac}
   & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)
 \end{split}\end{align}
 where $\boldsymbol\sigma$ are the Pauli matrices, $\mathbb{1}$ is the two-by-two identity matrix, and $\psi$ is a four-component Dirac spinor.
-For $\frac{v}{c}\lesssim 0.1$ an expansion in $(\frac{v}{c})^2$ is appropriate and  to first order gives
+For non-relativistic electrons, $\frac{v}{c}\lesssim 0.1$, an expansion in $(\frac{v}{c})^2$ is appropriate and  to first order gives
 \begin{align}\begin{split}
+  \label{eq:expansion}
   & \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n
 \end{split}\end{align}
 where $\psi_n$ has been normalized to preserve unitarity in the expansion and $E=\frac{1}{e}\nabla V$.
-This expansion produces several well known terms from non relativistic quantum mechanics.
-The third term is the Zeeman term, the fourth term is the spin orbit coupling, the fifth is the Darwin term, the last three terms are higher order corrections.
-The spin orbit term can be recast in a more familiar from since $E=\frac{e\hat{r}}{r^2}$ is the coulomb field from the nucleus.
+The expansion in equation \ref{eq:expansion} contains several well known terms from non relativistic quantum mechanics.
+The third term is the Zeeman term, the fourth term is the spin orbit coupling, and the fifth is the Darwin term.
+The last three terms are higher order corrections.
+The spin orbit term can be rewritten in a more familiar way since $E=\frac{e\hat{r}}{r^2}$ is the electric field sourced by the nucleus.
 \begin{align}
+  \label{eq:soc}
   -\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}=-\frac{e^2\hbar\boldsymbol{\sigma\cdot p \times r}}{4m_0^2c^2r^3}\newline=\frac{\boldsymbol{\hat{S}\cdot \hat{L}}}{2m_0^2c^2r^3}
 \end{align}
 Here $\hat{S}, \hat{L}$ are the spin operator and angular momentum operator respectively and the Thomas factor of $\frac{1}{2}$ appears naturally.
 
-The above derivation shows that spin orbit coupling is a relativistic effect.
-Therefore it is not surprising that there should be a similar effect in materials.
-In materials the periodic arrangement of the nuclei give rise to an electronic band structure.
+The above derivation shows that spin orbit coupling can become large as the electron's momentum becomes large.
+The effect is also enhanced by strong $E$ fields near high Z nuclei.
+Since both of these conditions are met in crystalline solids it is not surprising to find spin orbit coupling in materials.
+In crystalline solids the periodic arrangement of the nuclei give rise to an electronic band structure.
+These bands are then dressed by more complicated phenomena such as spin orbit couplings, surface effects, and multi body physics.
+Since the band structure of a solid dictates its physical properties, especially the band structure near the fermi surface, it is important to understand what is going on.
 
-\section{Rashba}
+\section{The Rashba Effect}
+One particular type of spin orbit coupling caused by the interface at the edge of a crystal is called the Rashba Effect.
 ...
 \section{Angular Resolved Photoemission Spectroscopy}
 The photoelectric effect, by which light incident on a metal freed electrons from the material, was first discovered by Hertz in 1887.
 Physicist of the day did not understand the photoelectric effect until Albert Einstien published his 1905 paper, for which he later won the Nobel Prize.
 Einstein realized that the incident light came in quantum packets called photons.
-These photons could be absorbed by an electron in the material.
+These photons could be absorbed by an electron in the material, a process that transfers the photon energy and momentum to the electron.
 If the electron has enough energy after absorbing a photon it can overcome the potential barrier keeping electrons in the material.
-This process is summarized by
+This process is summarized in equation \ref{eq:photoelectric}.
 \begin{align}
+  \label{eq:photoelectric}
   E_{\text{kin}}=h\nu-\phi
 \end{align}
 Where $E_{\text{kin}}$ is the maximum kinetic energy of the escaping electron, $\nu$ is the photon frequency, and $\phi$ is the work function of the material.
 Work functions of typical metals are approximately 4-5 eV.
 
-The photoemitted electrons escape from the material's surface in all directions.
-By measuring the energy, $E_{\text{kin}}$, of photoelectrons coming off a surface at a given angle the electrons' momentum \emph{p} can be completely determined.
-The magnitude of the photoelectrons' momentum is given by $|\boldsymbol{p}|=\sqrt{2mE_{\text{kin}}}$ and the parallel and perpendicular components can be obtained from the polar and azimuthal emission angle.
+The photoemitted electrons escape from the surface in all directions.
+By measuring the energy, $E_{\text{kin}}$, of photoelectrons coming off a surface at a given angle the electron momentum \emph{p} can be completely determined.
+The magnitude of the photoelectron momentum is given by $|\boldsymbol{p}|=\sqrt{2mE_{\text{kin}}}$ and the parallel and perpendicular components can be obtained from the polar and azimuthal emission angle.
+(Give equations for p parallel and p perpendicular)
+
 With the photon energies used in ARPES experiments the photon momentum can be neglected.
-Therefore in the noninteracting electron picture and using conservation of energy and momentum the kinetic energy and momentum of the photoelectron can be related to the binding energy $E_b$ and the crystal momentum $\hbar\boldsymbol{k}$ in the solid\cite{Damascelli}:
+Therefore in the noninteracting electron picture with conservation of energy and momentum the kinetic energy and momentum of the photoelectron can be related to the binding energy $E_b$ and the crystal momentum $\hbar\boldsymbol{k}$ in the solid\cite{Damascelli}:
 \begin{align}
   E_{\text{kin}}=h\nu-\phi-|E_B|
 \end{align}
@@ -89,7 +99,7 @@ Therefore in the noninteracting electron picture and using conservation of energ
 \end{align}
 $\theta$ is the angle coming off the surface normal.
 The perpendicular component of the wave vector $\boldsymbol{k_{\perp}}$ is not conserved across the sample surface because translational symmetry across the surface in the normal direction is broken.  
-This means that determination of the full crystal wave vector \emph{k} can not be determined from ARPES alone.
+As a result, the determination of the full crystal wave vector \emph{k} can not be determined from ARPES alone.
 In low dimensional systems $\boldsymbol{k_{\perp}}$ becomes less relevant; in the case of 2D films the electronic dispersion is almost completely characterized by $\boldsymbol{k_{\parallel}}$.
 
 
@@ -100,6 +110,13 @@ For
 
 
 \section{Looking for Spin Effects}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=2in]{fig/asymmetry.pdf}
+  \caption[should I put this here?]
+  {caption needed Taken from \cite{Okuda-Kimura}}
+  \label{fig:asymmetry}
+\end{figure}
 As discussed in the above section, ARPES measures both the energy and momentum degrees of freedom but ignores the spin of the detected electrons.
 SARPES measures all three quantum numbers simultaneously and allows for a much richer understanding of the band structure of materials.
 Accomplishing this is more technically challenging than it appears at first glance.
@@ -107,7 +124,8 @@ A Stern-Gerlach experiment would be the most direct way to investigate spin pola
 However, the Lorentz force makes it impossible to measure the spin of a charged object such as an electron.
 As a result physicists measure electron spin indirectly by spin-dependant scattering off of a material with well studied properties.
 As one can guess, this is a very inefficient process.
-asymmetry
+Figure \ref{fig:asymmetry} (a) and (b) show how this process is realized.
+
 sherman function
 probability
 
@@ -115,7 +133,7 @@ The most common type of spin detector is the Mott detector.
 The Mott detector works by
 
 VLEED uses spin exhange interractions ...
-Was improved by \cite{Fe paper}
+Was improved by \cite{Bertacco}
 improved sensitivity
 
 \section{COPHEE or ESPRESSO?}
@@ -128,12 +146,17 @@ ESPRESSO
 Bismuth (Bi) is the heaviest nonradioactive element.
 Because it has such a large Z value it was expected to have strong spin orbit coupling as well as strong spin-split surface states resulting from the Rashba effect.
 
+The first SARPES study of Bi was conducted by Hirahara et al \cite{Hirahara}.
+They studied (sample info) using (mott info) with an energy resolution of (res info).
+These firsts results probed the surface states and found agreement with the predicted Rashba splitting.
+Later Kimura et al studied the bulk ...
+
 Using a Xeon discharge lamp and a SARPES setup, a group in Tohoku observed an unexpected out-of-plane spin polarization\cite{Takayama}.
 
 More recently the Hiroshima group studied Bi(111) using the ESPRESSO machine \cite{Miyahara}.
-These measurements are the most accurate to date with resolutions of $\Delta E~20meV$ and $\Delta k~0.02\AA$.
+These measurements are the most accurate to date with resolutions of $\Delta E\sim20meV$ and $\Delta k\sim0.02\AA$.
 The Hiroshima group found the expected in-plane Rashba helical spin structure as well as the anomalous out-of-plane spin polarization.
-Unlike the Tohoku group, they were able to show a dependences of the out-of-plane spin polarization on the film quality.
+Unlike the Tohoku group, they were able to show a dependence of the out-of-plane spin polarization on the film quality.
 Thus the Hiroshima group concluded the effect is a result three-fold crystal symmetry of Bi(111) films.
 Their conclusions are supported by recent X-ray diffraction results that show Bi films can have two domain types in which the crystal axis is rotated 180 degrees to each other \cite{Shirasawa}.
 The Hiroshima group was able to observe that the in-plane Rashba spin polarisation was unaffected by domain type while the out-of-plane spin polarization was opposite in the two domains.
@@ -146,8 +169,6 @@ One of the most exciting applications of studying the surface spin properties of
 Spintronics are electronic devices that use the
 
 
-
-\section{}
 
 \bibliographystyle{plain}
 \bibliography{mybib}
