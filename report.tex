@@ -49,7 +49,7 @@ where $\boldsymbol\sigma$ are the Pauli matrices, $\mathbb{1}$ is the two-by-two
 For non-relativistic electrons, $\frac{v}{c}\lesssim 0.1$, an expansion in $(\frac{v}{c})^2$ is appropriate and  to first order gives
 \begin{align}\begin{split}
   \label{eq:expansion}
-  & \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n\text{,}
+& \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar}{4m_0^2c^2}\boldsymbol{\sigma\cdot p \times E}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n\text{,}
 \end{split}\end{align}
 where $\psi_n$ has been normalized to preserve unitarity in the expansion, $\boldsymbol{B}=\boldsymbol{\nabla}\times\boldsymbol{A}$, and $\boldsymbol{E}=\frac{1}{e}\nabla V$.
 The expansion in Eq. (\ref{eq:expansion}) contains several well known terms from non-relativistic quantum mechanics.
@@ -80,19 +80,19 @@ In the absence of magnetic fields this leads to Kramer's degeneracy
 If spatial inversion symmetry breaks then Eq. (\ref{eq:kramer}) breaks with it; resulting in a spin-splitting of electronic band structures\cite{Winkler}.
 
 If we give our two dimensional system a crystal potential $V$, the lack of inversion symmetry in the normal direction to the crystal surface can generate a net electric field $\boldsymbol{E}=-\boldsymbol{\nabla}V=E_0\hat{z}$.
-Relativistic corrections for an electron in the gas moving with velocity $\boldsymbol{v}$ will give rise to an effective magnetic field $\boldsymbol{B}=\frac{\boldsymbol{E}\times\boldsymbol{p}}{c^2}$.
+As shown in term four of Eq. (\ref{eq:expansion}) this $\boldsymbol{E}$ field gives rise to a nonzero spin-orbit coupling.
 This magnetic field will couple to the electron's spin creating an effective spin-orbit coupling; in two dimensions this is reduced to the Rashba Hamiltonian
 \begin{align}
   \label{eq:rashba}
   H_{\text{R}}=\alpha_{\text{R}}(\boldsymbol{k}\times\hat{z})\cdot\hat{\boldsymbol{S}}\text{.}
 \end{align}
-The factor $\alpha_{\text{R}}$ is treated as a coupling; it is well defined in this toy derivation but in real materials it can have complicated dependencies.
+The factor $\alpha_{\text{R}}$ is treated as a coupling; it is well defined in this toy derivation but in real materials it is nontrivial to calculate.
 Now we have the total Hamiltonian
 \begin{align}
   \label{eq:totalH}
-  H=H_{\text{free}}+H_{\text{R}}=\frac{\hbar^2\boldsymbol{k}_\parallel^2}{2m}+\alpha_{\text{R}}(k_x\hat{\boldsymbol{S}}_y-k_y\hat{\boldsymbol{S}}_x)\text{,}
+  H=H_{\text{free}}+H_{\text{R}}=\frac{\hbar^2k_\parallel^2}{2m}+\alpha_{\text{R}}(k_x\hat{S}_y-k_y\hat{S}_x)\text{,}
 \end{align}
-giving eigenvalues
+with eigenvalues
 \begin{align}
   \label{eq:eigenvalues}
   E_k=\frac{\hbar^2\boldsymbol{k}_{\parallel}}{2m}\pm\alpha_{R}\left|\boldsymbol{k}_{\parallel}\right|\text{.}
@@ -108,18 +108,17 @@ Now we can find the spin expectation value
   \label{eq:expectation}
   \left<\psi_{\boldsymbol{k}}\left|\hat{\boldsymbol{S}}\right|\psi_{\boldsymbol{k}}\right>=\frac{1}{k}\left(\begin{array}{c} \mp k_x \\ \mp k_y \\ 0 \end{array} \right) = \left(\begin{array}{c} \mp \sin\phi \\ \mp \cos\phi \\ 0 \end{array} \right)\text{.}
 \end{align}
-
-
-
-
+This result shows that the spin expectation value is always oriented perpendicular to both the electron momenta and the surface normal.
+Putting this all together we get a picture shown in Fig. \ref{fig:rashba} of two spin split bands offset from a common central symmetry point (the $\bar{\Gamma}$ point).
+If a cut is made to these bands at a given energy the result is a fermi surface of two concentric circles around the $\bar{\Gamma}$ point.
+The two circles have their spin polarization vector oriented along the circumference of the circle with opposite orientation.
 \begin{figure}[h]
   \centering
   \includegraphics[width=2in]{fig/rashba.pdf}
   \caption[should I put this here?]
   {caption needed Taken from \cite{Dil}}
-  \label{fig:asymmetry}
+  \label{fig:rashba}
 \end{figure}
-In a real crystal, space-inversion symmetry is broken at the edge of the material.
 
 \section{Angular Resolved Photoemission Spectroscopy}
 The photoelectric effect, by which light incident on a metal freed electrons from the material, was first discovered by Hertz in 1887.
