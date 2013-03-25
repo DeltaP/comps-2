@@ -1,4 +1,8 @@
-*.aux
-*.bbl
+report-blx.bib
+
+*.pl
 *.blg
-texcount.pl
+*.aux
+*.pdf
+*.xml
+*.bbl
