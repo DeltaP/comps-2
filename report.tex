@@ -31,35 +31,34 @@ This is accomplished by shining light on a sample and measuring the energy and m
 ARPES has been successful in studying a wide range of condensed matter systems including:  direct band mapping of solids,  high temperature superconductors, and topological insulators.
 More recent developments in the field of ARPES have allowed researchers to measure the spin of photo-emitted electrons \cite{Dil, Osterwalder} opening up the field of spin resolved ARPES.
 Spin measurements can be difficult experimentally and spin resolved ARPES is complementary to other techniques and is especially useful in studying itinerant magnetic systems \cite{Osterwalder}.
-Understanding spin dynamics in condensed matter systems is especially important for the physics and application of devices that exploit electric spin, called spintronics \cite{wolf}.
 
 Spin resolved ARPES (SARPES) is currently being used to measure various strong spin-orbit materials by mapping their ground state spin-orbit texture.
 Spin-orbit coupling is the interaction of a particle's spin with its momentum; this coupling in an asymmetrical confining potential can lead to an asymmetry in the spin polarization of the material.
 The Rashba effect causes spin asymmetry to arise in a material due to differences in the structure between the bulk and surface of a material \cite{Dil}.
-In both types of materials, the spin of photo-emitted electrons contains information about the spin asymmetry in the sample.
+Understanding spin dynamics in condensed matter systems is especially important for the physics and application of devices that exploit electric spin, called spintronics \cite{wolf}.
 
 \section{Spin Orbit Coupling}
 Spin orbit coupling occurs when an electron's spin interacts with its momentum.
 This effect happens in atomic systems and is responsible for the fine structure in atomic spectra.
-While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}, shown in Eq. (\ref{eq:Dirac}).
+While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}
 \begin{align}\begin{split}
   \label{eq:Dirac}
-  & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)
+  & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)\text{.}
 \end{split}\end{align}
 where $\boldsymbol\sigma$ are the Pauli matrices, $\mathbb{1}$ is the two-by-two identity matrix, and $\psi$ is a four-component Dirac spinor.
 For non-relativistic electrons, $\frac{v}{c}\lesssim 0.1$, an expansion in $(\frac{v}{c})^2$ is appropriate and  to first order gives
 \begin{align}\begin{split}
   \label{eq:expansion}
-  & \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n
+  & \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n\text{,}
 \end{split}\end{align}
-where $\psi_n$ has been normalized to preserve unitarity in the expansion and $E=\frac{1}{e}\nabla V$.
+where $\psi_n$ has been normalized to preserve unitarity in the expansion, $\boldsymbol{B}=\boldsymbol{\nabla}\times\boldsymbol{A}$, and $\boldsymbol{E}=\frac{1}{e}\nabla V$.
 The expansion in Eq. (\ref{eq:expansion}) contains several well known terms from non-relativistic quantum mechanics.
 The third term is the Zeeman term, the fourth term is the spin orbit coupling, and the fifth is the Darwin term.
-The last three terms are higher order corrections.
-The spin orbit term can be rewritten in a more familiar way since $E=\frac{e\hat{r}}{r^2}$ is the electric field sourced by the nucleus.
+The last three terms are first order corrections.
+The spin orbit term can be rewritten in a more familiar way since $\boldsymbol{E}=\frac{e\hat{r}}{r^2}$ is the electric field sourced by the nucleus.
 \begin{align}
   \label{eq:soc}
-  -\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}=-\frac{e^2\hbar\boldsymbol{\sigma\cdot p \times r}}{4m_0^2c^2r^3}\newline=\frac{\boldsymbol{\hat{S}\cdot \hat{L}}}{2m_0^2c^2r^3}=\frac{\boldsymbol{\nabla}V\times\boldsymbol{p}\cdot\hat{\boldsymbol{S}}}{2m_0^2c^2}
+  -\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}=-\frac{e^2\hbar\boldsymbol{\sigma\cdot p \times r}}{4m_0^2c^2r^3}\newline=\frac{\boldsymbol{\hat{S}\cdot \hat{L}}}{2m_0^2c^2r^3}
 \end{align}
 Here $\hat{S}, \hat{L}$ are the spin operator and angular momentum operator respectively and the Thomas factor of $\frac{1}{2}$ appears naturally.
 
@@ -68,7 +67,7 @@ The effect is also enhanced by strong $E$ fields near high Z nuclei.
 Since both of these conditions are met in crystalline solids it is not surprising to find spin orbit coupling in materials.
 In crystalline solids the periodic arrangement of the nuclei give rise to an electronic band structure.
 These bands are then dressed by more complicated phenomena such as spin orbit couplings, surface effects, and multi body physics.
-Since the band structure of a solid dictates its physical properties, especially the band structure near the fermi surface, it is important to understand what is going on.
+Since the band structure of a solid dictates its physical properties, especially the band structure near the fermi surface, it is important to understand their structure in detail.
 
 \section{The Rashba Effect}
 The Bychkov-Rashba model describes the motion of an electron in a two-dimensional electron gas with a potential gradient normal to the plane of the gas\cite{Rashba}.
@@ -76,7 +75,7 @@ In a crystal, time-reversal and space-inversion symmetry require the electron en
 In the absence of magnetic fields this leads to Kramer's degeneracy
 \begin{align}
   \label{eq:kramer}
-  E(\boldsymbol{k},\uparrow)=E(-\boldsymbol{k},\downarrow)\text{.}
+  E(\boldsymbol{k},\uparrow)=E(\boldsymbol{k},\downarrow)\text{.}
 \end{align}
 If spatial inversion symmetry breaks then Eq. (\ref{eq:kramer}) breaks with it; resulting in a spin-splitting of electronic band structures\cite{Winkler}.
 
@@ -96,8 +95,22 @@ Now we have the total Hamiltonian
 giving eigenvalues
 \begin{align}
   \label{eq:eigenvalues}
-  E_k=\frac{\hbar^2\boldsymbol{k}_{\parallel}}{2m}\pm\alpha_{R}|\boldsymbol{k}_{\parallel}\text{.}
+  E_k=\frac{\hbar^2\boldsymbol{k}_{\parallel}}{2m}\pm\alpha_{R}\left|\boldsymbol{k}_{\parallel}\right|\text{.}
 \end{align}
+The wavefunctions for the two dimensional electron gas are
+\begin{align}
+  \label{eq:wavefn}
+  \psi_{\boldsymbol{k}}=\frac{e^{i\boldsymbol{k}\cdot\boldsymbol{r}}}{2\sqrt{S}}\left(\begin{array}{c} 1 \\ \mp ie^{i\phi} \end{array} \right)\text{,}
+\end{align}
+where $\boldsymbol{k}=k(\cos\phi,\sin\phi,0)$ and $S$ is the surface area.
+Now we can find the spin expectation value
+\begin{align}
+  \label{eq:expectation}
+  \left<\psi_{\boldsymbol{k}}\left|\hat{\boldsymbol{S}}\right|\psi_{\boldsymbol{k}}\right>=\frac{1}{k}\left(\begin{array}{c} \mp k_x \\ \mp k_y \\ 0 \end{array} \right) = \left(\begin{array}{c} \mp \sin\phi \\ \mp \cos\phi \\ 0 \end{array} \right)\text{.}
+\end{align}
+
+
+
 
 \begin{figure}[h]
   \centering
@@ -151,10 +164,11 @@ ARPES experiments need a light source that is energetic enough to cause the samp
 Three types of photon sources are typically used:  gas discharge lamps \cite{Damascelli}, synchrotron radiation \cite{Damascelli}, and more recently lasers \cite{Dessau}.
 Currently SARPES experiments are limited to gas discharge lamps and synchrotron radiation.
 Synchrotron radiation is advantageous because it has a wide spectral range (visible light to x-ray), the intensity is very high, and it is very polarized.
-Gas discharge lamps provide high resolution because they are at relatively low energy light at a well defined frequency.
+Gas discharge lamps provide high resolution because they produce relatively low energy light at a well defined frequency.
 
 Regardless of the source, once the light strikes the sample the photo-emitted electrons are collected by the hemispherical analyzer.
-The analyzer determines the emitted electrons emission angle and energy and is composed of a multi-element electrostatic input lens, a hemispherical deflector, and an electron detector.
+The analyzer determines the emitted electrons emission angle and energy.
+It is composed of a multi-element electrostatic input lens, a hemispherical deflector, and an electron detector.
 The lens decelerates and focuses the photoelectrons onto the entrance slit to the deflector.
 The deflector is made of two concentric hemispheres of radius $R_1$ and $R_2$.
 The hemispheres are held at a potential difference $\Delta V$, and effectively selects out electrons within a narrow energy range centered at $E_{\text{pass}}=e\Delta V / (\frac{R_1}{R_2}-\frac{R_2}{R_1})$.
@@ -184,9 +198,9 @@ Because the Stern-Gerlach experiment is 100\% efficient, this asymmetry is the s
 In the scattering used in experiments the efficiency is much smaller.
 Instead the polarization is written as an energy dependent function such that the polarization is given by $P=S(E)A$.
 The function $S(E)$ is called the Sherman function and it measures the efficiency of the target for a given electron energy.
-If the Sherman function is known and the asymmetry is measured then spin up and spin down intensities can be found
+If the Sherman function is known and the asymmetry is measured then spin up and spin down intensities are
 \begin{align}
-  I_{\uparrow}=\frac{(1+P)I}{2}\quad I_{\downarrow}=\frac{(1-P)I}{2}\quad \text{with}\quad I=I_{\uparrow}+I_{\downarrow}\propto I_A+I_B
+  I_{\uparrow}=\frac{(1+P)I}{2}\quad I_{\downarrow}=\frac{(1-P)I}{2}\quad \text{with}\quad I=I_{\uparrow}+I_{\downarrow}\propto I_A+I_B\text{.}
 \end{align}
 An overall figure of merit can be assigned to the measurement of spin polarization $\epsilon=\frac{I}{I_0}(S(E))^2$.
 
@@ -213,8 +227,8 @@ A newer method of measuring the spin polarization of electrons is very low energ
 VLEED spin detectors use a ferromagnetic target to preferentially reflect spins of a chosen polarization.
 This is accomplished because a magnetized ferromagnet has an asymmetry in the density of states with spin up and spin down.
 The probability of an electron of a given spin to be reflected or absorbed by the target is proportional to the density of unoccupied spin states in the material\cite{Okuda-Kimura}.
-This technique is much more efficient than Mott scattering, typical figure of merits are $1\times10^{-2}$.
-Furthermore, only one detector is required so detector asymmetry is not a problem in non magnetic samples.
+This technique is much more efficient than Mott scattering, a typical figure of merit is $1\times10^{-2}$.
+Furthermore, because paths A and B are identical, only one detector is required so detector asymmetry is not a problem in non magnetic samples.
 Unfortunately, preparing the target is difficult and the scattering properties of the target degrade with time.
 Great improvements were made by \cite{Bertacco} who showed a Fe(001)-p(1x1)-O target was both a better polarizer and was orders of magnitude more stable than Fe alone.
 Even with this improvement, VLEED instruments must still be calibrated against a Mott instrument and periodically checked to ensure stability.
@@ -233,7 +247,7 @@ This allows researchers to get a very detailed picture of the band structure wit
 \end{figure}
 COPHEE, shown in Fig. \ref{fig:cophee}, is unique because it employs two orthogonally mounted Mott polarimeters\cite{Hoesch}.
 Both polarimeters are capable of measuring spin polarization in two directions.
-As a result of this geometry it is able to measure four spin projections simultaneously, allowing for a full three dimensional spin characterization of the sample's electron structure.
+As a result of this geometry it is able to measure four spin projections simultaneously, allowing for a full three dimensional spin characterization of the sample.
 The redundant spin projection serves as a useful cross check between the two analysers.
 COPHEE is is able to reach energy resolutions of 15meV and angular resolutions of $\pm1\degree$.
 
