@@ -38,7 +38,7 @@ Spin-orbit coupling is the interaction of a particle's spin with its momentum; t
 The Rashba effect causes spin asymmetry to arise in a material due to differences in the structure between the bulk and surface of a material \cite{Dil}.
 In both types of materials, the spin of photo-emitted electrons contains information about the spin asymmetry in the sample.
 
-\section{Spin Orbit Couplings}
+\section{Spin Orbit Coupling}
 Spin orbit coupling occurs when an electron's spin interacts with its momentum.
 This effect happens in atomic systems and is responsible for the fine structure in atomic spectra.
 While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}, shown in Eq. (\ref{eq:Dirac}).
@@ -59,7 +59,7 @@ The last three terms are higher order corrections.
 The spin orbit term can be rewritten in a more familiar way since $E=\frac{e\hat{r}}{r^2}$ is the electric field sourced by the nucleus.
 \begin{align}
   \label{eq:soc}
-  -\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}=-\frac{e^2\hbar\boldsymbol{\sigma\cdot p \times r}}{4m_0^2c^2r^3}\newline=\frac{\boldsymbol{\hat{S}\cdot \hat{L}}}{2m_0^2c^2r^3}
+  -\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}=-\frac{e^2\hbar\boldsymbol{\sigma\cdot p \times r}}{4m_0^2c^2r^3}\newline=\frac{\boldsymbol{\hat{S}\cdot \hat{L}}}{2m_0^2c^2r^3}=\frac{\boldsymbol{\nabla}V\times\boldsymbol{p}\cdot\hat{\boldsymbol{S}}}{2m_0^2c^2}
 \end{align}
 Here $\hat{S}, \hat{L}$ are the spin operator and angular momentum operator respectively and the Thomas factor of $\frac{1}{2}$ appears naturally.
 
@@ -71,8 +71,43 @@ These bands are then dressed by more complicated phenomena such as spin orbit co
 Since the band structure of a solid dictates its physical properties, especially the band structure near the fermi surface, it is important to understand what is going on.
 
 \section{The Rashba Effect}
-One particular type of spin orbit coupling caused by the interface at the edge of a crystal is called the Rashba Effect.
-...
+The Bychkov-Rashba model describes the motion of an electron in a two-dimensional electron gas with a potential gradient normal to the plane of the gas\cite{Rashba}.
+In a crystal, time-reversal and space-inversion symmetry require the electron energy eigenvalue states to obey $E(\boldsymbol{k},\uparrow)=E(-\boldsymbol{k},\downarrow)$ and $E(\boldsymbol{k},\downarrow)=E(-\boldsymbol{k},\downarrow)$ respectively\cite{Okuda-Kimura}.
+In the absence of magnetic fields this leads to Kramer's degeneracy
+\begin{align}
+  \label{eq:kramer}
+  E(\boldsymbol{k},\uparrow)=E(-\boldsymbol{k},\downarrow)\text{.}
+\end{align}
+If spatial inversion symmetry breaks then Eq. (\ref{eq:kramer}) breaks with it; resulting in a spin-splitting of electronic band structures\cite{Winkler}.
+
+If we give our two dimensional system a crystal potential $V$, the lack of inversion symmetry in the normal direction to the crystal surface can generate a net electric field $\boldsymbol{E}=-\boldsymbol{\nabla}V=E_0\hat{z}$.
+Relativistic corrections for an electron in the gas moving with velocity $\boldsymbol{v}$ will give rise to an effective magnetic field $\boldsymbol{B}=\frac{\boldsymbol{E}\times\boldsymbol{p}}{c^2}$.
+This magnetic field will couple to the electron's spin creating an effective spin-orbit coupling; in two dimensions this is reduced to the Rashba Hamiltonian
+\begin{align}
+  \label{eq:rashba}
+  H_{\text{R}}=\alpha_{\text{R}}(\boldsymbol{k}\times\hat{z})\cdot\hat{\boldsymbol{S}}\text{.}
+\end{align}
+The factor $\alpha_{\text{R}}$ is treated as a coupling; it is well defined in this toy derivation but in real materials it can have complicated dependencies.
+Now we have the total Hamiltonian
+\begin{align}
+  \label{eq:totalH}
+  H=H_{\text{free}}+H_{\text{R}}=\frac{\hbar^2\boldsymbol{k}_\parallel^2}{2m}+\alpha_{\text{R}}(k_x\hat{\boldsymbol{S}}_y-k_y\hat{\boldsymbol{S}}_x)\text{,}
+\end{align}
+giving eigenvalues
+\begin{align}
+  \label{eq:eigenvalues}
+  E_k=\frac{\hbar^2\boldsymbol{k}_{\parallel}}{2m}\pm\alpha_{R}|\boldsymbol{k}_{\parallel}\text{.}
+\end{align}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=2in]{fig/rashba.pdf}
+  \caption[should I put this here?]
+  {caption needed Taken from \cite{Dil}}
+  \label{fig:asymmetry}
+\end{figure}
+In a real crystal, space-inversion symmetry is broken at the edge of the material.
+
 \section{Angular Resolved Photoemission Spectroscopy}
 The photoelectric effect, by which light incident on a metal freed electrons from the material, was first discovered by Hertz in 1887.
 Physicist of the day did not understand the photoelectric effect until Albert Einstein published his 1905 paper, for which he later won the Nobel Prize.
