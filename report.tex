@@ -16,13 +16,13 @@
 \newcommand{\parenthnewln}{\right.\\&\left.\quad\quad{}}
 
 \begin{document}
-\title{Applying Spin and Angular Resolved Photoemission Spectroscopy to the study of the Rashba effect in Bismuth Films}
+\title{Applying Spin and Angular Resolved Photoemission Spectroscopy to the Study of the Rashba Effect in Bismuth Films}
 \author{Gregory Petropoulos}
 \maketitle
 \abstract{
-This review opens with a discussion of spin orbit coupling and how the Rashba effect can lead to spin-split band structure.
+This review opens with a discussion of spin-orbit coupling and how the Rashba effect can lead to spin-split band structure.
 The focus of this paper is the experimental setup of spin and angular resolved photoemission spectroscopy.
-I end with discussion of recent results for Bismuth films and an outlook for the future.
+I end with a discussion of recent results for bismuth films and an outlook for the future.
 }
 
 \section{Introduction}
@@ -40,37 +40,38 @@ Understanding spin dynamics in condensed matter systems is especially important 
 \section{Spin Orbit Coupling}
 Spin orbit coupling occurs when an electron's spin interacts with its momentum.
 This effect happens in atomic systems and is responsible for the fine structure in atomic spectra.
-While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation \cite{Dirac, Winkler}
+While there are semi-classical derivations of spin-orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation \cite{Dirac, Winkler}
 \begin{align}\begin{split}
   \label{eq:Dirac}
   & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)\text{.}
 \end{split}\end{align}
-where $\boldsymbol\sigma$ are the Pauli matrices, $\mathbb{1}$ is the two-by-two identity matrix, and $\psi$ is a four-component Dirac spinor.
-For non-relativistic electrons, $\frac{v}{c}\lesssim 0.1$, an expansion in $(\frac{v}{c})^2$ is appropriate and  to first order gives
+In Eq. (\ref{eq:Dirac}) $\boldsymbol\sigma$ are the Pauli matrices, $\mathbb{1}$ is the two-by-two identity matrix, and $\psi$ is a four-component Dirac spinor.
+For non-relativistic electrons, $\frac{v}{c}\lesssim 0.1$, an expansion in $(\frac{v}{c})^2$ is appropriate.
+To first order we get
 \begin{align}\begin{split}
   \label{eq:expansion}
 & \left [ \frac{p^2}{2m_0}\right.+V+\frac{e\hbar}{2m_0}\boldsymbol{\sigma\cdot B}-\frac{e\hbar}{4m_0^2c^2}\boldsymbol{\sigma\cdot p \times E}-\frac{e\hbar^2}{8m_0^2c^2}\boldsymbol{\nabla\cdot E} \newln-\frac{p^4}{8m_0^3c^2}-\frac{e\hbar p^2}{4m_0^3c^2}\boldsymbol{\sigma \cdot B}-\left.\frac{(ehB)^2}{8m_0^3c^2}\right]\psi_n=E\psi_n\text{,}
 \end{split}\end{align}
 where $\psi_n$ has been normalized to preserve unitarity in the expansion, $\boldsymbol{B}=\boldsymbol{\nabla}\times\boldsymbol{A}$, and $\boldsymbol{E}=\frac{1}{e}\nabla V$.
 The expansion in Eq. (\ref{eq:expansion}) contains several well known terms from non-relativistic quantum mechanics.
-The third term is the Zeeman term, the fourth term is the spin orbit coupling, and the fifth is the Darwin term.
+The third term is the Zeeman term, the fourth term is the spin-orbit coupling, and the fifth is the Darwin term.
 The last three terms are first order corrections.
-The spin orbit term can be rewritten in a more familiar way since $\boldsymbol{E}=\frac{e\hat{r}}{r^2}$ is the electric field sourced by the nucleus.
+The spin-orbit term can be rewritten in a more familiar way since $\boldsymbol{E}=\frac{e\hat{r}}{r^2}$ is the electric field sourced by the nucleus.
 \begin{align}
   \label{eq:soc}
   -\frac{e\hbar\boldsymbol{\sigma\cdot p \times E}}{4m_0^2c^2}=-\frac{e^2\hbar\boldsymbol{\sigma\cdot p \times r}}{4m_0^2c^2r^3}\newline=\frac{\boldsymbol{\hat{S}\cdot \hat{L}}}{2m_0^2c^2r^3}
 \end{align}
-Here $\hat{S}, \hat{L}$ are the spin operator and angular momentum operator respectively and the Thomas factor of $\frac{1}{2}$ appears naturally.
+Here $\hat{\boldsymbol{S}}, \hat{\boldsymbol{L}}$ are the spin operator and angular momentum operator respectively and the Thomas factor of $\frac{1}{2}$ appears naturally.
 
-The above derivation shows that spin orbit coupling can become large as the electron's momentum becomes large.
-The effect is also enhanced by strong $E$ fields near high Z nuclei.
-Since both of these conditions are met in crystalline solids it is not surprising to find spin orbit coupling in materials.
+The above derivation shows that spin-orbit coupling becomes larger as the electron's momentum increases.
+The effect is also enhanced by strong $\boldsymbol{E}$ fields near high Z nuclei.
+Since both of these conditions are met in crystalline solids it is not surprising to find spin-orbit coupling in materials.
 In crystalline solids the periodic arrangement of the nuclei give rise to an electronic band structure.
-These bands are then dressed by more complicated phenomena such as spin orbit couplings, surface effects, and multi body physics.
-Since the band structure of a solid dictates its physical properties, especially the band structure near the fermi surface, it is important to understand their structure in detail.
+These bands are then dressed by more complicated phenomena such as spin-orbit couplings, surface effects, and multi body physics.
+Since the band structure of a solid contains information about its physical properties, especially the band structure near the fermi surface, it is important to understand their structure in detail.
 
 \section{The Rashba Effect}
-The Bychkov-Rashba model describes the motion of an electron in a two-dimensional electron gas with a potential gradient normal to the plane of the gas\cite{Rashba}.
+The Bychkov-Rashba model describes the motion of an electron in a two-dimensional electron gas with a potential gradient normal to the plane of the gas \cite{Rashba}.
 In a crystal, time-reversal and space-inversion symmetry require the electron energy eigenvalue states to obey $E(\boldsymbol{k},\uparrow)=E(-\boldsymbol{k},\downarrow)$ and $E(\boldsymbol{k},\downarrow)=E(-\boldsymbol{k},\downarrow)$ respectively \cite{Okuda-Kimura}.
 In the absence of magnetic fields this leads to Kramer's degeneracy
 \begin{align}
@@ -101,7 +102,7 @@ with eigenvalues
 The wavefunctions for the two dimensional electron gas are
 \begin{align}
   \label{eq:wavefn}
-  \psi_{\boldsymbol{k}}=\frac{e^{i\boldsymbol{k}\cdot\boldsymbol{r}}}{2\sqrt{S}}\left(\begin{array}{c} 1 \\ \mp ie^{i\phi} \end{array} \right)\text{,}
+  \psi_{\boldsymbol{k}}=\frac{e^{i\boldsymbol{k}\cdot\boldsymbol{r}}}{2\sqrt{S}}\left(\begin{array}{c} 1 \\ \mp ie^{i\phi} \\ 0 \end{array} \right)\text{,}
 \end{align}
 where $\boldsymbol{k}=k(\cos\phi,\sin\phi,0)$ and $S$ is the surface area.
 Now we can find the spin expectation value
@@ -122,11 +123,11 @@ If a cut is made to these bands at a given energy the result is a fermi surface 
 The two circles have their spin polarization vector oriented along the circumference of the circle with opposite orientation.
 
 \section{Angular Resolved Photoemission Spectroscopy}
-The photoelectric effect, by which light incident on a metal freed electrons from the material, was first discovered by Hertz in 1887.
-Physicist of the day did not understand the photoelectric effect until Albert Einstein published his 1905 paper, for which he later won the Nobel Prize.
+The photoelectric effect, by which light incident on a metal liberates electrons from the material, was first discovered by Hertz in 1887.
+Physicists of the day did not understand the photoelectric effect until Albert Einstein published his 1905 paper, for which he later won the Nobel Prize.
 Einstein realized that the incident light came in quantum packets called photons.
 These photons could be absorbed by an electron in the material, a process that transfers the photon energy and momentum to the electron.
-If the electron has enough energy after absorbing a photon, it can overcome the potential barrier keeping electrons in the material.
+If the electron has enough energy after absorbing a photon, it can overcome the potential barrier, which keeps electrons in the material.
 This process is summarized in Eq. (\ref{eq:photoelectric}).
 \begin{align}
   \label{eq:photoelectric}
@@ -136,10 +137,9 @@ Where $E_{\text{kin}}$ is the maximum kinetic energy of the escaping electron, $
 Work functions of typical metals are approximately 4-5 eV.
 
 The photoemitted electrons escape from the surface in all directions.
-By measuring the energy, $E_{\text{kin}}$, of photoelectrons coming off a surface at a given angle the electron momentum \emph{p} can be completely determined.
+By measuring the energy, $E_{\text{kin}}$, of photoelectrons coming off a surface at a given angle, the electron momentum $\boldsymbol{p}$ can be completely determined.
 The magnitude of the photoelectron momentum is given by $|\boldsymbol{p}|=\sqrt{2mE_{\text{kin}}}$ and the parallel and perpendicular components can be obtained from the polar and azimuthal emission angle.
-(Give equations for p parallel and p perpendicular)
-
+%include equations for parallel and perpendicular momentum
 With the photon energies used in ARPES experiments the photon momentum can be neglected.
 Therefore in the noninteracting electron picture with conservation of energy and momentum the kinetic energy and momentum of the photoelectron can be related to the binding energy $E_b$ and the crystal momentum $\hbar\boldsymbol{k}$ in the solid\cite{Damascelli}:
 \begin{align}
@@ -198,7 +198,7 @@ Because the Stern-Gerlach experiment is 100\% efficient, this asymmetry is the s
 In the scattering used in experiments the efficiency is much smaller.
 Instead the polarization is written as an energy dependent function such that the polarization is given by $P=S(E)A$.
 The function $S(E)$ is called the Sherman function and it measures the efficiency of the target for a given electron energy.
-If the Sherman function is known and the asymmetry is measured then spin up and spin down intensities are
+If the Sherman function is known and the asymmetry is measured, the spin up and spin down intensities are
 \begin{align}
   I_{\uparrow}=\frac{(1+P)I}{2}\quad I_{\downarrow}=\frac{(1-P)I}{2}\quad \text{with}\quad I=I_{\uparrow}+I_{\downarrow}\propto I_A+I_B\text{.}
 \end{align}
@@ -206,10 +206,10 @@ An overall figure of merit can be assigned to the measurement of spin polarizati
 The figure of merit for a SARPES set up of $1\times10^{-2}$ means that you need to collect 100 times more electrons to get the same resolution as an identical spin integrated experiment.
 
 The most common type of spin detector uses Mott scattering.
-Mott scattering takes advantage of spin orbit coupling between relativistic electrons being scattered with atomic nuclei.
+Mott scattering takes advantage of spin-orbit coupling between relativistic electrons being scattered with atomic nuclei.
 Electrons are typically accelerated to relativistic energies and strike a thin gold film.
 Gold is often chosen because it is easy to make, chemically inert, and has a relatively high Z.
-Two beams, A and B, are then measured coming off the gold target at equal angles\cite{Hoesch}.
+Two beams, A and B, are then measured coming off the gold target at equal angles \cite{Hoesch}.
 Mott detectors are easy to work with because their scattering properties are extremely stable.
 Additionally, calibration of Mott detectors can be achieved by measuring the Sherman function and comparing to theoretical calculations.
 One drawback of Mott scattering is that the two channels are measured using different detectors, leading to an unwanted asymmetry from instrumentation\cite{Okuda-Kimura}.
@@ -246,7 +246,7 @@ This allows researchers to get a very detailed picture of the band structure wit
   {caption needed Taken from \cite{Hoesch}}
   \label{fig:cophee}
 \end{figure}
-COPHEE, shown in Fig. \ref{fig:cophee}, is unique because it employs two orthogonally mounted Mott polarimeters\cite{Hoesch}.
+COPHEE, shown in Fig. \ref{fig:cophee}, is unique because it employs two orthogonally mounted Mott polarimeters \cite{Hoesch}.
 Both polarimeters are capable of measuring spin polarization in two directions.
 As a result of this geometry it is able to measure four spin projections simultaneously, allowing for a full three dimensional spin characterization of the sample.
 The redundant spin projection serves as a useful cross check between the two analysers.
@@ -267,28 +267,28 @@ ESPRESSO is able to achieve energy resolutions of 7.5meV and angular resolutions
 
 \section{Experimental Results for Bismuth Films}
 Bismuth (Bi) is the heaviest nonradioactive element.
-Because it has such a large Z value it was expected to have strong spin orbit coupling as well as strong spin-split surface states resulting from the Rashba effect.
+Because it has such a large Z value it was expected to have strong spin-orbit coupling as well as strong spin-split surface states resulting from the Rashba effect.
 
 The first SARPES study of Bi was conducted by Hirahara et al \cite{Hirahara}.
 They studied 10 bilayer thick films of Bi(111) using an unpolarized Helium discharge lamp (21.2eV) and a Mott detector to measure the spin asymmetry.
 Their measurement had an energy resolution of 110meV and 1$\degree$ and probed surface states.
-This measurement revealed a spin structure is antisymmetric with respect to the $\bar{\Gamma}$ point as predicted by theory and the spin polarization could be as large as $\pm 0.5$.
-Later Kimura et al used SARPES to probe the bulk continuum states of Bi(111).
+This measurement revealed the spin structure is antisymmetric with respect to the $\bar{\Gamma}$ point as predicted by theory and the spin polarization could be as large as $\pm 0.5$.
+Later, Kimura et al used SARPES to probe the bulk continuum states of Bi(111).
 Their findings are also consistent with \cite{Hirahara} and theoretical predictions of a strong Rashba splitting antisymmetric to the $\bar{\Gamma}$ point.
 
-Using a Xenon discharge lamp (8.437eV), a group in Tohoku was able to achieve a resolution of 40meV on 40 bilayer samples\cite{Takayama}.
+Using a Xenon discharge lamp (8.437eV), a group in Tohoku was able to achieve a resolution of 40meV on 40 bilayer samples \cite{Takayama}.
 In addition to observing the same in plane Rashba splitting that previous groups reported, the Tohoku group observed an unexpected out-of-plane spin polarization as well as an asymmetry of the parallel component of polarization across the $\bar{\Gamma}$ point.
 Both of these features are not described by the Rashba effect and were unexpected.
 The authors offer the breaking of time reversal symmetry as a possible explanation for their observations.
 Such a breaking would have profound implications because such symmetry breaking is usually caused by magnetic order in the crystal which is not present in Bi.
 
-More recently the Hiroshima group studied Bi(111) using the ESPRESSO machine and a He lamp source (21.22eV)\cite{Miyahara}.
+More recently the Hiroshima group studied Bi(111) using the ESPRESSO machine and a He lamp source (21.22eV) \cite{Miyahara}.
 These measurements are the most accurate to date with resolutions of $\Delta E\sim20meV$ and $\Delta k\sim0.02\AA$.
 The Hiroshima group found the expected in-plane Rashba helical spin structure as well as the anomalous out-of-plane spin polarization.
 Unlike the Tohoku group, they were able to show a dependence of the out-of-plane spin polarization on the film quality.
-Thus the Hiroshima group concluded the effect is a result three-fold crystal symmetry of Bi(111) films.
+Thus the Hiroshima group concluded the effect is a result of the three-fold crystal symmetry of Bi(111) films.
 Their conclusions are supported by recent X-ray diffraction results that show Bi films can have two domain types in which the crystal axis is rotated 180 degrees to each other \cite{Shirasawa}.
-The Hiroshima group was able to observe that the in-plane Rashba spin polarisation was unaffected by domain type while the out-of-plane spin polarization was opposite in the two domains.
+The Hiroshima group was able to observe that the in-plane Rashba spin polarization was unaffected by domain type, while the out-of-plane spin polarization was opposite in the two domains.
 
 \section{Outlook and Applications to Spintronics}
 Recent improvements in SARPES have made it a powerful tool for studying spin-dependant phenomena in materials.
