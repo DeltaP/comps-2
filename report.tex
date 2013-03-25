@@ -20,7 +20,7 @@
 \author{Gregory Petropoulos}
 \maketitle
 \abstract{
-This review opens with a discussion of spin orbit coupling and how the Rashba effect can lead to spin-split bands in spin orbit coupled materials.
+This review opens with a discussion of spin orbit coupling and how the Rashba effect can lead to spin-split band structure.
 The focus of this paper is the experimental setup of spin and angular resolved photoemission spectroscopy.
 I end with discussion of recent results for Bismuth films and an outlook for the future.
 }
@@ -40,7 +40,7 @@ Understanding spin dynamics in condensed matter systems is especially important 
 \section{Spin Orbit Coupling}
 Spin orbit coupling occurs when an electron's spin interacts with its momentum.
 This effect happens in atomic systems and is responsible for the fine structure in atomic spectra.
-While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation\cite{Winkler}
+While there are semi-classical derivations of spin orbit coupling, the process is best described by a non-relativistic expansion of the Dirac equation \cite{Dirac, Winkler}
 \begin{align}\begin{split}
   \label{eq:Dirac}
   & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)\text{.}
@@ -71,7 +71,7 @@ Since the band structure of a solid dictates its physical properties, especially
 
 \section{The Rashba Effect}
 The Bychkov-Rashba model describes the motion of an electron in a two-dimensional electron gas with a potential gradient normal to the plane of the gas\cite{Rashba}.
-In a crystal, time-reversal and space-inversion symmetry require the electron energy eigenvalue states to obey $E(\boldsymbol{k},\uparrow)=E(-\boldsymbol{k},\downarrow)$ and $E(\boldsymbol{k},\downarrow)=E(-\boldsymbol{k},\downarrow)$ respectively\cite{Okuda-Kimura}.
+In a crystal, time-reversal and space-inversion symmetry require the electron energy eigenvalue states to obey $E(\boldsymbol{k},\uparrow)=E(-\boldsymbol{k},\downarrow)$ and $E(\boldsymbol{k},\downarrow)=E(-\boldsymbol{k},\downarrow)$ respectively \cite{Okuda-Kimura}.
 In the absence of magnetic fields this leads to Kramer's degeneracy
 \begin{align}
   \label{eq:kramer}
@@ -79,6 +79,7 @@ In the absence of magnetic fields this leads to Kramer's degeneracy
 \end{align}
 If spatial inversion symmetry breaks then Eq. (\ref{eq:kramer}) breaks with it; resulting in a spin-splitting of electronic band structures\cite{Winkler}.
 
+This splitting can also be thought of in a more concrete way that elucidates some of its characteristics.
 If we give our two dimensional system a crystal potential $V$, the lack of inversion symmetry in the normal direction to the crystal surface can generate a net electric field $\boldsymbol{E}=-\boldsymbol{\nabla}V=E_0\hat{z}$.
 As shown in term four of Eq. (\ref{eq:expansion}) this $\boldsymbol{E}$ field gives rise to a nonzero spin-orbit coupling.
 This magnetic field will couple to the electron's spin creating an effective spin-orbit coupling; in two dimensions this is reduced to the Rashba Hamiltonian
@@ -95,7 +96,7 @@ Now we have the total Hamiltonian
 with eigenvalues
 \begin{align}
   \label{eq:eigenvalues}
-  E_k=\frac{\hbar^2\boldsymbol{k}_{\parallel}}{2m}\pm\alpha_{R}\left|\boldsymbol{k}_{\parallel}\right|\text{.}
+  E_k=\frac{\hbar^2k_{\parallel}^2}{2m}\pm\alpha_{R}\left|\boldsymbol{k}_{\parallel}\right|\text{.}
 \end{align}
 The wavefunctions for the two dimensional electron gas are
 \begin{align}
@@ -108,17 +109,17 @@ Now we can find the spin expectation value
   \label{eq:expectation}
   \left<\psi_{\boldsymbol{k}}\left|\hat{\boldsymbol{S}}\right|\psi_{\boldsymbol{k}}\right>=\frac{1}{k}\left(\begin{array}{c} \mp k_x \\ \mp k_y \\ 0 \end{array} \right) = \left(\begin{array}{c} \mp \sin\phi \\ \mp \cos\phi \\ 0 \end{array} \right)\text{.}
 \end{align}
-This result shows that the spin expectation value is always oriented perpendicular to both the electron momenta and the surface normal.
-Putting this all together we get a picture shown in Fig. \ref{fig:rashba} of two spin split bands offset from a common central symmetry point (the $\bar{\Gamma}$ point).
-If a cut is made to these bands at a given energy the result is a fermi surface of two concentric circles around the $\bar{\Gamma}$ point.
-The two circles have their spin polarization vector oriented along the circumference of the circle with opposite orientation.
-\begin{figure}[h]
+\begin{figure}[th]
   \centering
   \includegraphics[width=2in]{fig/rashba.pdf}
   \caption[should I put this here?]
   {caption needed Taken from \cite{Dil}}
   \label{fig:rashba}
 \end{figure}
+This result shows that the spin expectation value is always oriented perpendicular to both the electron momenta and the surface normal.
+Putting this all together we get a picture shown in Fig. \ref{fig:rashba} of two spin split bands offset from a common central symmetry point (the $\bar{\Gamma}$ point).
+If a cut is made to these bands at a given energy the result is a fermi surface of two concentric circles around the $\bar{\Gamma}$ point.
+The two circles have their spin polarization vector oriented along the circumference of the circle with opposite orientation.
 
 \section{Angular Resolved Photoemission Spectroscopy}
 The photoelectric effect, by which light incident on a metal freed electrons from the material, was first discovered by Hertz in 1887.
@@ -161,7 +162,7 @@ In low dimensional systems $\boldsymbol{k_{\perp}}$ becomes less relevant; in th
 \end{figure}
 ARPES experiments need a light source that is energetic enough to cause the sample to photo-emit.
 Three types of photon sources are typically used:  gas discharge lamps \cite{Damascelli}, synchrotron radiation \cite{Damascelli}, and more recently lasers \cite{Dessau}.
-Currently SARPES experiments are limited to gas discharge lamps and synchrotron radiation.
+To date SARPES experiments have only used gas discharge lamps and synchrotron radiation.
 Synchrotron radiation is advantageous because it has a wide spectral range (visible light to x-ray), the intensity is very high, and it is very polarized.
 Gas discharge lamps provide high resolution because they produce relatively low energy light at a well defined frequency.
 
@@ -202,6 +203,7 @@ If the Sherman function is known and the asymmetry is measured then spin up and 
   I_{\uparrow}=\frac{(1+P)I}{2}\quad I_{\downarrow}=\frac{(1-P)I}{2}\quad \text{with}\quad I=I_{\uparrow}+I_{\downarrow}\propto I_A+I_B\text{.}
 \end{align}
 An overall figure of merit can be assigned to the measurement of spin polarization $\epsilon=\frac{I}{I_0}(S(E))^2$.
+The figure of merit for a SARPES set up of $1\times10^{-2}$ means that you need to collect 100 times more electrons to get the same resolution as an identical spin integrated experiment.
 
 The most common type of spin detector uses Mott scattering.
 Mott scattering takes advantage of spin orbit coupling between relativistic electrons being scattered with atomic nuclei.
@@ -229,7 +231,7 @@ The probability of an electron of a given spin to be reflected or absorbed by th
 This technique is much more efficient than Mott scattering, a typical figure of merit is $1\times10^{-2}$.
 Furthermore, because paths A and B are identical, only one detector is required so detector asymmetry is not a problem in non magnetic samples.
 Unfortunately, preparing the target is difficult and the scattering properties of the target degrade with time.
-Great improvements were made by \cite{Bertacco} who showed a Fe(001)-p(1x1)-O target was both a better polarizer and was orders of magnitude more stable than Fe alone.
+Great improvements were made by Bertacco \cite{Bertacco} who showed a Fe(001)-p(1x1)-O target was both a better polarizer and was orders of magnitude more stable than Fe alone.
 Even with this improvement, VLEED instruments must still be calibrated against a Mott instrument and periodically checked to ensure stability.
 Nonetheless, the two order of magnitude gain of VLEED detectors over Mott detectors is significant and has lead to much better SARPES results.
 \section{COPHEE or ESPRESSO?}
@@ -289,8 +291,8 @@ Their conclusions are supported by recent X-ray diffraction results that show Bi
 The Hiroshima group was able to observe that the in-plane Rashba spin polarisation was unaffected by domain type while the out-of-plane spin polarization was opposite in the two domains.
 
 \section{Outlook and Applications to Spintronics}
-Clearly recent improvements in SARPES have made it a powerful tool for studying spin-dependant phenomena in materials.
-Bismuth films are one of many systems that have been recently studied where SARPES measurements have revealed features that were missed by other investigations.
+Recent improvements in SARPES have made it a powerful tool for studying spin-dependant phenomena in materials.
+Bismuth films are one of many recently studied systems where SARPES measurements have revealed features that were missed by other investigations.
 Better understanding the role that the spin degrees of freedom play in solids will further our understanding of complicated many-body physics; giving us a better understanding of the world around us.
 Additionally, better understanding spin degrees of freedom in solids can lead to novel electronics.
 Perhaps most exciting applications of studying the surface spin properties of materials is the application of these materials for spintronics.
