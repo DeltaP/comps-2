@@ -68,7 +68,7 @@ The effect is also enhanced by strong $\boldsymbol{E}$ fields near high Z nuclei
 Since both of these conditions are met in crystalline solids it is not surprising to find spin-orbit coupling in materials.
 In crystalline solids the periodic arrangement of the nuclei give rise to an electronic band structure.
 These bands are then dressed by more complicated phenomena such as spin-orbit couplings, surface effects, and multi body physics.
-Since the band structure of a solid contains information about its physical properties, especially the band structure near the fermi surface, it is important to understand their structure in detail.
+Since the band structure of a solid contains information about its physical properties, especially the band structure near the Fermi surface, it is important to understand their structure in detail.
 
 \section{The Rashba Effect}
 The Bychkov-Rashba model describes the motion of an electron in a two-dimensional electron gas with a potential gradient normal to the plane of the gas \cite{Rashba}.
@@ -78,7 +78,8 @@ In the absence of magnetic fields this leads to Kramer's degeneracy
   \label{eq:kramer}
   E(\boldsymbol{k},\uparrow)=E(\boldsymbol{k},\downarrow)\text{.}
 \end{align}
-If spatial inversion symmetry breaks then Eq. (\ref{eq:kramer}) breaks with it; resulting in a spin-splitting of electronic band structures\cite{Winkler}.
+The truncation of the periodic crystal in the normal direction at the surface breaks spatial inversion symmetry.
+If spatial inversion symmetry breaks then Eq. (\ref{eq:kramer}) breaks with it; resulting in a spin-splitting of electronic band structures \cite{Winkler}.
 
 This splitting can also be thought of in a more concrete way that elucidates some of its characteristics.
 If we give our two dimensional system a crystal potential $V$, the lack of inversion symmetry in the normal direction to the crystal surface can generate a net electric field $\boldsymbol{E}=-\boldsymbol{\nabla}V=E_0\hat{z}$.
@@ -112,14 +113,14 @@ Now we can find the spin expectation value
 \end{align}
 \begin{figure}[th]
   \centering
-  \includegraphics[width=2in]{fig/rashba.pdf}
-  \caption[should I put this here?]
-  {caption needed Taken from \cite{Dil}}
+  \includegraphics[height=2in]{fig/rashba.pdf}
+  \caption[]
+  {The band structure of a two-dimensional electron gas due to the Rashba effect.  The $\bar{\Gamma}$ point is an arbitrary shift to the center of symmetry in momentum space.  At some energy the split bands cross at the $\bar{\Gamma}$ point \cite{Dil}.}
   \label{fig:rashba}
 \end{figure}
 This result shows that the spin expectation value is always oriented perpendicular to both the electron momenta and the surface normal.
 Putting this all together we get a picture shown in Fig. \ref{fig:rashba} of two spin split bands offset from a common central symmetry point (the $\bar{\Gamma}$ point).
-If a cut is made to these bands at a given energy the result is a fermi surface of two concentric circles around the $\bar{\Gamma}$ point.
+If a cut is made to these bands at a given energy the result is a constant energy surface of two concentric circles around the $\bar{\Gamma}$ point.
 The two circles have their spin polarization vector oriented along the circumference of the circle with opposite orientation.
 
 \section{Angular Resolved Photoemission Spectroscopy}
@@ -155,10 +156,10 @@ In low dimensional systems $\boldsymbol{k_{\perp}}$ becomes less relevant; in th
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=2in]{fig/arpes.pdf}
-  \caption[should I put this here?]
-  {caption needed Taken from \cite{Damascelli}}
-  \label{fig:asymmetry}
+  \includegraphics[height=2in]{fig/arpes.pdf}
+  \caption[]
+  {Photo-emitted electrons are focused by the lens and separated in energy by the hemisphere analyser \cite{Damascelli}.}
+  \label{fig:arpes}
 \end{figure}
 ARPES experiments need a light source that is energetic enough to cause the sample to photo-emit.
 Three types of photon sources are typically used:  gas discharge lamps \cite{Damascelli}, synchrotron radiation \cite{Damascelli}, and more recently lasers \cite{Dessau}.
@@ -166,20 +167,20 @@ To date SARPES experiments have only used gas discharge lamps and synchrotron ra
 Synchrotron radiation is advantageous because it has a wide spectral range (visible light to x-ray), the intensity is very high, and it is very polarized.
 Gas discharge lamps provide high resolution because they produce relatively low energy light at a well defined frequency.
 
-Regardless of the source, once the light strikes the sample the photo-emitted electrons are collected by the hemispherical analyzer.
+Regardless of the source, once the light strikes the sample the photo-emitted electrons are collected by the hemispherical analyzer shown in Fig. \ref{fig:arpes}.
 The analyzer determines the emitted electrons emission angle and energy.
 It is composed of a multi-element electrostatic input lens, a hemispherical deflector, and an electron detector.
 The lens decelerates and focuses the photoelectrons onto the entrance slit to the deflector.
 The deflector is made of two concentric hemispheres of radius $R_1$ and $R_2$.
 The hemispheres are held at a potential difference $\Delta V$, and effectively selects out electrons within a narrow energy range centered at $E_{\text{pass}}=e\Delta V / (\frac{R_1}{R_2}-\frac{R_2}{R_1})$.
-The entire ARPES apparatus is under a vacuum, typically lower than $5\times10^{-11}$ torr.
+The entire ARPES apparatus is under a vacuum, typically lower than $5\times10^{-11}$ torr \cite{Damascelli}.
 
 \section{Looking for Spin Effects}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=2in]{fig/asymmetry.pdf}
-  \caption[should I put this here?]
-  {caption needed Taken from \cite{Okuda-Kimura}}
+  \includegraphics[height=2.5in]{fig/asymmetry.pdf}
+  \caption[]
+  {(a) In spin dependant scattering a target scatters an incident beam of intensity $I_0$ into two beams $I_A$ and $I_B$.  (b) An example of how an energy distribution curve (EDC) may look if measured from $I_0$ or $I_A$ and $I_B$.  (c) The measured spin asymmetry is much smaller than the actual spin polarization.  (d) Comparing spin integrated EDC with the spin resolved EDC \cite{Okuda-Kimura}.}
   \label{fig:asymmetry}
 \end{figure}
 Traditional ARPES measures both the energy and momentum degrees of freedom but ignores the spin degree of freedom.
@@ -189,7 +190,7 @@ A Stern-Gerlach experiment would be the most direct way to investigate spin pola
 However, the Lorentz force makes it impossible to measure the spin of a charged object such as an electron.
 As a result physicists measure electron spin indirectly by spin-dependant scattering off of a target.
 As one can guess, this is a very inefficient process.
-Figure \ref{fig:asymmetry} (a) and (b) show how this process is realized.
+Fig. \ref{fig:asymmetry} (a) and (b) show how this process is realized.
 The spin dependant scattering is characterized by an asymmetry $A$ between two scattering channels A and B \cite{Okuda-Kimura}.
 \begin{align}
   A=\frac{I_A-I_B}{I_A+I_B}
@@ -206,28 +207,28 @@ An overall figure of merit can be assigned to the measurement of spin polarizati
 The figure of merit for a SARPES set up of $1\times10^{-2}$ means that you need to collect 100 times more electrons to get the same resolution as an identical spin integrated experiment.
 
 The most common type of spin detector uses Mott scattering.
-Mott scattering takes advantage of spin-orbit coupling between relativistic electrons being scattered with atomic nuclei.
+Mott scattering takes advantage of spin-orbit coupling between relativistic electrons being scattered with atomic nuclei; shown in Fig. \ref{fig:detectortypes} (a).
 Electrons are typically accelerated to relativistic energies and strike a thin gold film.
 Gold is often chosen because it is easy to make, chemically inert, and has a relatively high Z.
 Two beams, A and B, are then measured coming off the gold target at equal angles \cite{Hoesch}.
 Mott detectors are easy to work with because their scattering properties are extremely stable.
 Additionally, calibration of Mott detectors can be achieved by measuring the Sherman function and comparing to theoretical calculations.
-One drawback of Mott scattering is that the two channels are measured using different detectors, leading to an unwanted asymmetry from instrumentation\cite{Okuda-Kimura}.
+One drawback of Mott scattering is that the two channels are measured using different detectors, leading to an unwanted asymmetry from instrumentation \cite{Okuda-Kimura}.
 In magnetic samples this can be accounted for by reversing the magnetic field on the sample.
 Typical figure of merit values for Mott scattering is $1\times10^{-4}$.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=2in]{fig/detectortypes.pdf}
-  \caption[should I put this here?]
-  {caption needed Taken from \cite{Okuda-Kimura}}
-  \label{fig:asymmetry}
+  \includegraphics[height=2.5in]{fig/detectortypes.pdf}
+  \caption[]
+  {(a) \textit{Left:}  Mott scattering off a target, scattered beams come off the target at equal angles.  \textit{Right:}  In Mott scattering electrons with different spin interact with the atomic potential differently.  (b) \textit{Left:}  VLEED scattering off a target.  \textit{Right:}  In VLEED scattering a material with more unoccupied spin down states will preferentially absorb spin down electrons and reflect spin up electrons. \cite{Okuda-Kimura}}
+  \label{fig:detectortypes}
 \end{figure}
 
 A newer method of measuring the spin polarization of electrons is very low energy electron diffraction (VLEED).
 VLEED spin detectors use a ferromagnetic target to preferentially reflect spins of a chosen polarization.
 This is accomplished because a magnetized ferromagnet has an asymmetry in the density of states with spin up and spin down.
-The probability of an electron of a given spin to be reflected or absorbed by the target is proportional to the density of unoccupied spin states in the material\cite{Okuda-Kimura}.
+The probability of an electron of a given spin to be reflected or absorbed by the target is proportional to the density of unoccupied spin states in the material \cite{Okuda-Kimura}; see Fig \ref{fig:detectortypes} (b).
 This technique is much more efficient than Mott scattering, a typical figure of merit is $1\times10^{-2}$.
 Furthermore, because paths A and B are identical, only one detector is required so detector asymmetry is not a problem in non magnetic samples.
 Unfortunately, preparing the target is difficult and the scattering properties of the target degrade with time.
@@ -241,9 +242,9 @@ This allows researchers to get a very detailed picture of the band structure wit
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=2in]{fig/cophee.pdf}
-  \caption[should I put this here?]
-  {caption needed Taken from \cite{Hoesch}}
+  \includegraphics[height=2in]{fig/cophee.pdf}
+  \caption[]
+  {Schematic diagram of the COPHEE detector.  Photo-emitted electrons are energy and angle selected by a hemispherical analyzer.  After exiting the hemispherical analyzer the beam reaches a switch which sends the beam to one of two Mott analyzer.  The Mott analyzers are oriented such that all three spin projections can be measured \cite{Hoesch}.}
   \label{fig:cophee}
 \end{figure}
 COPHEE, shown in Fig. \ref{fig:cophee}, is unique because it employs two orthogonally mounted Mott polarimeters \cite{Hoesch}.
@@ -254,9 +255,9 @@ COPHEE is is able to reach energy resolutions of 15meV and angular resolutions o
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=2in]{fig/espresso.pdf}
-  \caption[should I put this here?]
-  {caption needed Taken from \cite{Okuda}}
+  \includegraphics[height=2in]{fig/espresso.pdf}
+  \caption[]
+  {Schematic diagram of the ESPRESSO detector.  The ESPRESSO detector uses a VLEED spin detector to measur the spin projection along the x or z axis \cite{Okuda}.}
   \label{fig:espresso}
 \end{figure}
 ESPRESSO, shown in Fig. \ref{fig:espresso}, abandons Mott polarimeters in favor of the more sensitive VLEED detector, as a result it has the highest resolution of any SARPES instrument to date \cite{Okuda}.
@@ -266,18 +267,49 @@ This allows the detector to measure both in plane and out of plane spin polariza
 ESPRESSO is able to achieve energy resolutions of 7.5meV and angular resolutions of $\pm0.18\degree$.
 
 \section{Experimental Results for Bismuth Films}
+\begin{figure}[th]
+  \centering
+  \includegraphics[height=1.5in]{fig/bitop.pdf}
+  \caption[]
+  {The bismuth crystal structure from the top \cite{Shirasawa}.}
+  \label{fig:bitop}
+\end{figure}
+\begin{figure}[th]
+  \centering
+  \includegraphics[height=1.5in]{fig/biside.pdf}
+  \caption[]
+  {The bismuth cyrstal structure from the side \cite{Shirasawa}.}
+  \label{fig:biside}
+\end{figure}
 Bismuth (Bi) is the heaviest nonradioactive element.
 Because it has such a large Z value it was expected to have strong spin-orbit coupling as well as strong spin-split surface states resulting from the Rashba effect.
+Fig. \ref{fig:bitop} and Fig. \ref{fig:biside} show the crystal structure of Bi films that were used in these experiments.
 
-The first SARPES study of Bi was conducted by Hirahara et al \cite{Hirahara}.
+The first SARPES study of Bi was conducted by Hirahara et al. \cite{Hirahara}.
 They studied 10 bilayer thick films of Bi(111) using an unpolarized Helium discharge lamp (21.2eV) and a Mott detector to measure the spin asymmetry.
 Their measurement had an energy resolution of 110meV and 1$\degree$ and probed surface states.
-This measurement revealed the spin structure is antisymmetric with respect to the $\bar{\Gamma}$ point as predicted by theory and the spin polarization could be as large as $\pm 0.5$.
-Later, Kimura et al used SARPES to probe the bulk continuum states of Bi(111).
+This measurement revealed the spin structure is antisymmetric with respect to the $\bar{\Gamma}$ point, see Fig. \ref{fig:hirahara}, as predicted by theory and the spin polarization could be as large as $\pm 0.5$.
+\begin{figure}[h]
+  \centering
+  \includegraphics[height=2in]{fig/hirahara.pdf}
+  \caption[]
+  {The bismuth cyrstal structure from the side \cite{Hirahara}.}
+  \label{fig:hirahara}
+\end{figure}
+Later, Kimura et al. used SARPES to probe the bulk continuum states of Bi(111) \cite{Kimura}.
 Their findings are also consistent with \cite{Hirahara} and theoretical predictions of a strong Rashba splitting antisymmetric to the $\bar{\Gamma}$ point.
 
 Using a Xenon discharge lamp (8.437eV), a group in Tohoku was able to achieve a resolution of 40meV on 40 bilayer samples \cite{Takayama}.
-In addition to observing the same in plane Rashba splitting that previous groups reported, the Tohoku group observed an unexpected out-of-plane spin polarization as well as an asymmetry of the parallel component of polarization across the $\bar{\Gamma}$ point.
+In addition to observing the same in plane Rashba splitting that previous groups reported, the Tohoku group observed an unexpected out-of-plane spin polarization.
+The group also reported an asymmetry of the magnitude of the parallel component of polarization across the $\bar{\Gamma}$ point.
+These features are shown in Fig. \ref{fig:tohoku}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[height=2in]{fig/tohoku.pdf}
+  \caption[]
+  {The stacking of Bi monolayers \cite{Takayama}.}
+  \label{fig:tohoku}
+\end{figure}
 Both of these features are not described by the Rashba effect and were unexpected.
 The authors offer the breaking of time reversal symmetry as a possible explanation for their observations.
 Such a breaking would have profound implications because such symmetry breaking is usually caused by magnetic order in the crystal which is not present in Bi.
@@ -289,14 +321,21 @@ Unlike the Tohoku group, they were able to show a dependence of the out-of-plane
 Thus the Hiroshima group concluded the effect is a result of the three-fold crystal symmetry of Bi(111) films.
 Their conclusions are supported by recent X-ray diffraction results that show Bi films can have two domain types in which the crystal axis is rotated 180 degrees to each other \cite{Shirasawa}.
 The Hiroshima group was able to observe that the in-plane Rashba spin polarization was unaffected by domain type, while the out-of-plane spin polarization was opposite in the two domains.
-
+\begin{figure}[th]
+  \centering
+  \includegraphics[height=2in]{fig/miyahara.pdf}
+  \caption[]
+  {The bismuth cyrstal structure from the side \cite{Miyahara}.}
+  \label{fig:miyahara}
+\end{figure}
 \section{Outlook and Applications to Spintronics}
 Recent improvements in SARPES have made it a powerful tool for studying spin-dependant phenomena in materials.
+Consequently the number of SARPES experiments is growing and now commercial setups are sold.
 Bismuth films are one of many recently studied systems where SARPES measurements have revealed features that were missed by other investigations.
 Better understanding the role that the spin degrees of freedom play in solids will further our understanding of complicated many-body physics; giving us a better understanding of the world around us.
 Additionally, better understanding spin degrees of freedom in solids can lead to novel electronics.
 Perhaps most exciting applications of studying the surface spin properties of materials is the application of these materials for spintronics.
-Spintronics are electronic devices that use spin dependant properites of materials and promise to shrink ...
+Spintronics are electronic devices that use spin dependant properties of materials and promise to increase speed, decrease power consumption, and shrink the size of current electronic devices \cite{wolf}.
 
 \printbibliography
 \end{document}
