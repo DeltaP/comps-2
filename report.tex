@@ -46,6 +46,7 @@ While there are semi-classical derivations of spin-orbit coupling, the process i
   & (c\boldsymbol{\alpha\cdot p}+\beta m_{0}c^2+V)\psi=E\psi \quad\text{with}\newln\boldsymbol{\alpha}=\left(\begin{array}{cc} 0 & \boldsymbol{\sigma} \\ \boldsymbol{\sigma} & 0 \end{array} \right) \quad \beta=\left(\begin{array}{cc} \mathbb{1} & 0 \\ 0 & -\mathbb{1} \end{array} \right)\text{.}
 \end{split}\end{align}
 In Eq. (\ref{eq:Dirac}) $\boldsymbol\sigma$ are the Pauli matrices, $\mathbb{1}$ is the two-by-two identity matrix, and $\psi$ is a four-component Dirac spinor.
+To include electromagnetic interactions $\boldsymbol{p}\rightarrow\boldsymbol{p}-\frac{e}{c}\boldsymbol{A}$.
 For non-relativistic electrons, $\frac{v}{c}\lesssim 0.1$, an expansion in $(\frac{v}{c})^2$ is appropriate.
 To first order we get
 \begin{align}\begin{split}
@@ -78,13 +79,13 @@ In the absence of magnetic fields this leads to Kramer's degeneracy
   \label{eq:kramer}
   E(\boldsymbol{k},\uparrow)=E(\boldsymbol{k},\downarrow)\text{.}
 \end{align}
-The truncation of the periodic crystal in the normal direction at the surface breaks spatial inversion symmetry.
+The presence of a boundary in a crystal material breaks spatial inversion symmetry in the surface normal direction.
 If spatial inversion symmetry breaks then Eq. (\ref{eq:kramer}) breaks with it; resulting in a spin-splitting of electronic band structures \cite{Winkler}.
 
 This splitting can also be thought of in a more concrete way that elucidates some of its characteristics.
-If we give our two dimensional system a crystal potential $V$, the lack of inversion symmetry in the normal direction to the crystal surface can generate a net electric field $\boldsymbol{E}=-\boldsymbol{\nabla}V=E_0\hat{z}$.
+If $V$ is the crystal potential, it will have a gradient as you leave the boundary giving rise to a net electric field $\boldsymbol{E}=-\boldsymbol{\nabla}V=E_0\hat{z}$ normal to the surface.
 As shown in term four of Eq. (\ref{eq:expansion}) this $\boldsymbol{E}$ field gives rise to a nonzero spin-orbit coupling.
-This magnetic field will couple to the electron's spin creating an effective spin-orbit coupling; in two dimensions this is reduced to the Rashba Hamiltonian
+This interaction of electrons on the boundary is described by by the Rashba Hamiltonian
 \begin{align}
   \label{eq:rashba}
   H_{\text{R}}=\alpha_{\text{R}}(\boldsymbol{k}\times\hat{z})\cdot\hat{\boldsymbol{S}}\text{.}
@@ -103,7 +104,7 @@ with eigenvalues
 The wavefunctions for the two dimensional electron gas are
 \begin{align}
   \label{eq:wavefn}
-  \psi_{\boldsymbol{k}}=\frac{e^{i\boldsymbol{k}\cdot\boldsymbol{r}}}{2\sqrt{S}}\left(\begin{array}{c} 1 \\ \mp ie^{i\phi} \\ 0 \end{array} \right)\text{,}
+  \psi_{\boldsymbol{k}}=\frac{e^{i\boldsymbol{k}\cdot\boldsymbol{r}}}{2\sqrt{S}}\left(\begin{array}{c} 1 \\ \mp ie^{i\phi} \end{array} \right)\text{,}
 \end{align}
 where $\boldsymbol{k}=k(\cos\phi,\sin\phi,0)$ and $S$ is the surface area.
 Now we can find the spin expectation value
@@ -114,8 +115,7 @@ Now we can find the spin expectation value
 \begin{figure}[th]
   \centering
   \includegraphics[height=2in]{fig/rashba.pdf}
-  \caption[]
-  {The band structure of a two-dimensional electron gas due to the Rashba effect.  The $\bar{\Gamma}$ point is an arbitrary shift to the center of symmetry in momentum space.  At some energy the split bands cross at the $\bar{\Gamma}$ point \cite{Dil}.}
+  \caption{The band structure of a two-dimensional electron gas due to the Rashba effect.  The $\bar{\Gamma}$ point is an arbitrary shift to the center of symmetry in momentum space.  At some energy the split bands cross at the $\bar{\Gamma}$ point \cite{Dil}.}
   \label{fig:rashba}
 \end{figure}
 This result shows that the spin expectation value is always oriented perpendicular to both the electron momenta and the surface normal.
@@ -157,8 +157,7 @@ In low dimensional systems $\boldsymbol{k_{\perp}}$ becomes less relevant; in th
 \begin{figure}[h]
   \centering
   \includegraphics[height=2in]{fig/arpes.pdf}
-  \caption[]
-  {Photo-emitted electrons are focused by the lens and separated in energy by the hemisphere analyser \cite{Damascelli}.}
+  \caption{Photo-emitted electrons are focused by the lens and separated in energy by the hemisphere analyser \cite{Damascelli}.}
   \label{fig:arpes}
 \end{figure}
 ARPES experiments need a light source that is energetic enough to cause the sample to photo-emit.
@@ -179,8 +178,7 @@ The entire ARPES apparatus is under a vacuum, typically lower than $5\times10^{-
 \begin{figure}[h]
   \centering
   \includegraphics[height=2.5in]{fig/asymmetry.pdf}
-  \caption[]
-  {(a) In spin dependant scattering a target scatters an incident beam of intensity $I_0$ into two beams $I_A$ and $I_B$.  (b) An example of how an energy distribution curve (EDC) may look if measured from $I_0$ or $I_A$ and $I_B$.  (c) The measured spin asymmetry is much smaller than the actual spin polarization.  (d) Comparing spin integrated EDC with the spin resolved EDC \cite{Okuda-Kimura}.}
+  \caption{(a) In spin dependant scattering a target scatters an incident beam of intensity $I_0$ into two beams $I_A$ and $I_B$.  (b) An example of how an energy distribution curve (EDC) may look if measured from $I_0$ or $I_A$ and $I_B$.  (c) The measured spin asymmetry is much smaller than the actual spin polarization.  (d) Comparing spin integrated EDC with the spin resolved EDC \cite{Okuda-Kimura}.}
   \label{fig:asymmetry}
 \end{figure}
 Traditional ARPES measures both the energy and momentum degrees of freedom but ignores the spin degree of freedom.
@@ -220,8 +218,7 @@ Typical figure of merit values for Mott scattering is $1\times10^{-4}$.
 \begin{figure}[h]
   \centering
   \includegraphics[height=2.5in]{fig/detectortypes.pdf}
-  \caption[]
-  {(a) \textit{Left:}  Mott scattering off a target, scattered beams come off the target at equal angles.  \textit{Right:}  In Mott scattering electrons with different spin interact with the atomic potential differently.  (b) \textit{Left:}  VLEED scattering off a target.  \textit{Right:}  In VLEED scattering a material with more unoccupied spin down states will preferentially absorb spin down electrons and reflect spin up electrons. \cite{Okuda-Kimura}}
+  \caption{(a) \textit{Left:}  Mott scattering off a target, scattered beams come off the target at equal angles.  \textit{Right:}  In Mott scattering electrons with different spin interact with the atomic potential differently.  (b) \textit{Left:}  VLEED scattering off a target.  \textit{Right:}  In VLEED scattering a material with more unoccupied spin down states will preferentially absorb spin down electrons and reflect spin up electrons. \cite{Okuda-Kimura}}
   \label{fig:detectortypes}
 \end{figure}
 
@@ -243,8 +240,7 @@ This allows researchers to get a very detailed picture of the band structure wit
 \begin{figure}[h]
   \centering
   \includegraphics[height=2in]{fig/cophee.pdf}
-  \caption[]
-  {Schematic diagram of the COPHEE detector.  Photo-emitted electrons are energy and angle selected by a hemispherical analyzer.  After exiting the hemispherical analyzer the beam reaches a switch which sends the beam to one of two Mott analyzer.  The Mott analyzers are oriented such that all three spin projections can be measured \cite{Hoesch}.}
+  \caption{Schematic diagram of the COPHEE detector.  Photo-emitted electrons are energy and angle selected by a hemispherical analyzer.  After exiting the hemispherical analyzer the beam reaches a switch which sends the beam to one of two Mott analyzer.  The Mott analyzers are oriented such that all three spin projections can be measured \cite{Hoesch}.}
   \label{fig:cophee}
 \end{figure}
 COPHEE, shown in Fig. \ref{fig:cophee}, is unique because it employs two orthogonally mounted Mott polarimeters \cite{Hoesch}.
@@ -256,8 +252,7 @@ COPHEE is is able to reach energy resolutions of 15meV and angular resolutions o
 \begin{figure}[h]
   \centering
   \includegraphics[height=2in]{fig/espresso.pdf}
-  \caption[]
-  {Schematic diagram of the ESPRESSO detector.  The ESPRESSO detector uses a VLEED spin detector to measur the spin projection along the x or z axis \cite{Okuda}.}
+  \caption{Schematic diagram of the ESPRESSO detector.  The ESPRESSO detector uses a VLEED spin detector to measur the spin projection along the x or z axis \cite{Okuda}.}
   \label{fig:espresso}
 \end{figure}
 ESPRESSO, shown in Fig. \ref{fig:espresso}, abandons Mott polarimeters in favor of the more sensitive VLEED detector, as a result it has the highest resolution of any SARPES instrument to date \cite{Okuda}.
@@ -270,15 +265,13 @@ ESPRESSO is able to achieve energy resolutions of 7.5meV and angular resolutions
 \begin{figure}[th]
   \centering
   \includegraphics[height=1.5in]{fig/bitop.pdf}
-  \caption[]
-  {The bismuth crystal structure from the top \cite{Shirasawa}.}
+  \caption{The bismuth crystal structure from the top \cite{Shirasawa}.}
   \label{fig:bitop}
 \end{figure}
 \begin{figure}[th]
   \centering
   \includegraphics[height=1.5in]{fig/biside.pdf}
-  \caption[]
-  {The bismuth cyrstal structure from the side \cite{Shirasawa}.}
+  \caption{The structure resulting from stacking Bi monolayers viewed from the side \cite{Shirasawa}.}
   \label{fig:biside}
 \end{figure}
 Bismuth (Bi) is the heaviest nonradioactive element.
@@ -292,8 +285,7 @@ This measurement revealed the spin structure is antisymmetric with respect to th
 \begin{figure}[h]
   \centering
   \includegraphics[height=2in]{fig/hirahara.pdf}
-  \caption[]
-  {The bismuth cyrstal structure from the side \cite{Hirahara}.}
+  \caption{ \cite{Hirahara}.}
   \label{fig:hirahara}
 \end{figure}
 Later, Kimura et al. used SARPES to probe the bulk continuum states of Bi(111) \cite{Kimura}.
@@ -306,8 +298,7 @@ These features are shown in Fig. \ref{fig:tohoku}.
 \begin{figure}[h]
   \centering
   \includegraphics[height=2in]{fig/tohoku.pdf}
-  \caption[]
-  {The stacking of Bi monolayers \cite{Takayama}.}
+  \caption{ \cite{Takayama}.}
   \label{fig:tohoku}
 \end{figure}
 Both of these features are not described by the Rashba effect and were unexpected.
@@ -324,8 +315,7 @@ The Hiroshima group was able to observe that the in-plane Rashba spin polarizati
 \begin{figure}[th]
   \centering
   \includegraphics[height=2in]{fig/miyahara.pdf}
-  \caption[]
-  {The bismuth cyrstal structure from the side \cite{Miyahara}.}
+  \caption{ \cite{Miyahara}.}
   \label{fig:miyahara}
 \end{figure}
 \section{Outlook and Applications to Spintronics}
